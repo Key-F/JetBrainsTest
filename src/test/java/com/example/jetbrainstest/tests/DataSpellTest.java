@@ -12,13 +12,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DataSpellTest {
-
     private WebDriver driver;
     private DataSpellPage dt;
 
@@ -44,6 +46,7 @@ public class DataSpellTest {
     @Test
     @DisplayName("Проверка перехода на страницу NEW-UI")
     public void newUITest() {
+
         dt.clickNewUI();
         assertEquals("https://www.jetbrains.com/dataspell/new-ui/", driver.getCurrentUrl(), "Адреса не совпадают");
     }
@@ -59,6 +62,13 @@ public class DataSpellTest {
 
         dt.clickMacOs();
         assertEquals("https://www.jetbrains.com/dataspell/download/download-thanks.html?platform=mac", driver.getCurrentUrl(), "Не открылась страница для скачивания");
+    }
+
+    @Test
+    @DisplayName("Блок с информацией Features")
+    public void featuresTest(){
+        dt.featuresElement();
+        assertTrue(driver.findElement(By.cssSelector("h2#features")).isDisplayed(), "Нет нужного текста");
     }
 
 }
