@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.pages;
 
 import com.example.jetbrainstest.tests.DataSpellTest;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,21 +29,26 @@ public class DataSpellPage {
     @FindBy(css = "h2#features")
     private WebElement features;
 
+
+    @Step ("Переход на страницу New UI")
     public void clickNewUI() {
         newUILink.click();
         LOG.info("Переход на страницу New UI");
     }
 
+    @Step("Открытие выпадающего списка для скачивания.exe")
     public void clickdownLoadExe() {
         downLoadExe.click();
         LOG.info("Открытие выпадающего списка для скачивания.exe");
     }
 
+    @Step("Переход на страницу Thank You")
     public void clickMacOs() {
         masOcIntel.click();
         LOG.info("Переход на страницу Thank You");
     }
 
+    @Step("Отображается блок Features")
     public void featuresElement() {
         features.isDisplayed();
         LOG.info("Отображается блок Features");
