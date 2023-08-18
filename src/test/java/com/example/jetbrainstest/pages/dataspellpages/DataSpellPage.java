@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 public class DataSpellPage {
+    WebDriver driver;
 
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(DataSpellPage.class));
 
@@ -66,6 +67,7 @@ public class DataSpellPage {
 
 
     public DataSpellPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

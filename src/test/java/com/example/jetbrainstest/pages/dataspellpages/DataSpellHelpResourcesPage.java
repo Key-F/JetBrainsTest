@@ -15,6 +15,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DataSpellHelpResourcesPage {
+
+    WebDriver driver;
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(DataSpellHelpResourcesPage.class));
 
     @FindBy(xpath = "(//li[@data-toc-scroll='Quick_Start_Guide']/a[text()='Get started'])[1]")
@@ -45,6 +47,7 @@ public class DataSpellHelpResourcesPage {
     }
 
     public DataSpellHelpResourcesPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

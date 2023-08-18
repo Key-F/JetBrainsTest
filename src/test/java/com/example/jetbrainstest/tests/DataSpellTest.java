@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class DataSpellTest extends BaseTest {
-    private WebDriver driver;
+    WebDriver driver;
     private DataSpellPage dt;
     private DataSpellHelpResourcesPage dthr;
 
@@ -30,8 +30,8 @@ public class DataSpellTest extends BaseTest {
         super.setUp();
         getDriver().get("https://www.jetbrains.com/dataspell/");
 
-        dt = new DataSpellPage(getDriver());
-        dthr = new DataSpellHelpResourcesPage(getDriver());
+        dt = new DataSpellPage(driver);
+        dthr = new DataSpellHelpResourcesPage(driver);
     }
 
 
