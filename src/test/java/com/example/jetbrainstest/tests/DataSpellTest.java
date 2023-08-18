@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.tests;
 
+import com.example.jetbrainstest.AllureAttachmentsManager;
 import com.example.jetbrainstest.pages.dataspellpages.DataSpellHelpResourcesPage;
 import com.example.jetbrainstest.pages.dataspellpages.DataSpellPage;
 import org.junit.jupiter.api.AfterEach;
@@ -17,30 +18,23 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DataSpellTest {
+
+public class DataSpellTest extends BaseTest {
     private WebDriver driver;
     private DataSpellPage dt;
     private DataSpellHelpResourcesPage dthr;
 
     @BeforeEach
+    @Override
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
-        options.addArguments("--remote-allow-origins=*");
-        System.setProperty("webdriver.chrome.driver", "D:\\Папка Оли\\тестировщик\\chromedriver.exe");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.jetbrains.com/dataspell/");
+        super.setUp();
+        getDriver().get("https://www.jetbrains.com/dataspell/");
 
-        dt = new DataSpellPage(driver);
-        dthr = new DataSpellHelpResourcesPage(driver);
+        dt = new DataSpellPage(getDriver());
+        dthr = new DataSpellHelpResourcesPage(getDriver());
     }
 
-    @AfterEach
-    public void tearDown() {
-        driver.quit();
-    }
+
 
     @Test
     @DisplayName("Проверка перехода на страницу NEW-UI")
@@ -83,6 +77,7 @@ public class DataSpellTest {
         assertTrue(driver.findElement(By.xpath("//span[contains(text(),'Before you start')]")).isDisplayed(), "Нет нужного текста");
 
     }
+
 
 
 }
