@@ -31,19 +31,19 @@ public class DataSpellHelpResourcesPage {
 
     public void clickGetStarted() {
         getStarted.click();
-        LOG.info("Клик на GetStarted, раскрытие списка");
+        LOG.infoWithScreenshot("Клик на GetStarted, раскрытие списка");
     }
 
 
     public void clickfFirstSteps() {
         firstSteps.click();
-        LOG.info("Клик на FirstSteps, раскрытие списка");
+        LOG.infoWithScreenshot("Клик на FirstSteps, раскрытие списка");
     }
 
 
     public void clickOnboardingTour() {
         onboardingTour.click();
-        LOG.info("Открытие страницы Onboarding Tour");
+        LOG.infoWithScreenshot("Открытие страницы Onboarding Tour");
     }
 
     public DataSpellHelpResourcesPage(WebDriver driver) {

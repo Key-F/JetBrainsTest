@@ -22,7 +22,7 @@ public class DataSpellPage {
     @FindBy(xpath = "//a[contains(text(),'New UI')]")
     private WebElement newUILink;
 
-    @FindBy(css = "path[d=\'M19.004 9h-14l7 8 7-8z\']")
+    @FindBy(css = "button[data-test='dropdown-trigger']")
     private WebElement downLoadExe;
 
     @FindBy (xpath = "//span[contains(text(),'.dmg (macOS Intel)')]")

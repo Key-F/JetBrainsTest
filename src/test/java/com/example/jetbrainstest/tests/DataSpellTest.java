@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -20,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class DataSpellTest extends BaseTest {
-    WebDriver driver;
+
     private DataSpellPage dt;
     private DataSpellHelpResourcesPage dthr;
 
@@ -30,8 +31,8 @@ public class DataSpellTest extends BaseTest {
         super.setUp();
         getDriver().get("https://www.jetbrains.com/dataspell/");
 
-        dt = new DataSpellPage(driver);
-        dthr = new DataSpellHelpResourcesPage(driver);
+        dt = new DataSpellPage(getDriver());
+        dthr = new DataSpellHelpResourcesPage(getDriver());
     }
 
 
@@ -41,29 +42,24 @@ public class DataSpellTest extends BaseTest {
     public void newUITest() {
 
         dt.clickNewUI();
-        assertEquals("https://www.jetbrains.com/dataspell/new-ui/", driver.getCurrentUrl(), "Адреса не совпадают");
+        assertEquals("https://www.jetbrains.com/dataspell/new-ui/", getDriver().getCurrentUrl(), "Адреса не совпадают");
     }
 
     @Test
     @DisplayName("Открытие выпадающего списка для скачивания и переход на страницу скачивания .exe")
     public void clickdownMacOS() {
         dt.clickdownLoadExe();
-
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
-        //wait.until(ExpectedConditions.and(
-                //ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'.dmg (macOS Intel)')]")),
-               // ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'.dmg (macOS Intel)')]"))));
-        //((JavascriptExecutor)driver).executeScript("arguments[0].click();", masOcIntel);
-
+        WebElement masOcIntel = getDriver().findElement(By.xpath("//span[contains(text(),'.dmg (macOS Intel)')]"));
+        ((JavascriptExecutor)getDriver()).executeScript("arguments[0].click();", masOcIntel);
         dt.clickMacOs();
-        assertEquals("https://www.jetbrains.com/dataspell/download/download-thanks.html?platform=mac", driver.getCurrentUrl(), "Не открылась страница для скачивания");
+        assertEquals("https://www.jetbrains.com/dataspell/download/download-thanks.html?platform=mac", getDriver().getCurrentUrl(), "Не открылась страница для скачивания");
     }
 
     @Test
     @DisplayName("Блок с информацией Features")
     public void featuresTest(){
         dt.featuresElement();
-        assertTrue(driver.findElement(By.cssSelector("h2#features")).isDisplayed(), "Нет нужного текста");
+        assertTrue(getDriver().findElement(By.cssSelector("h2#features")).isDisplayed(), "Нет нужного текста");
     }
 
     @Test
@@ -74,7 +70,7 @@ public class DataSpellTest extends BaseTest {
         dthr.clickfFirstSteps();
         dthr.clickOnboardingTour();
 
-        assertTrue(driver.findElement(By.xpath("//span[contains(text(),'Before you start')]")).isDisplayed(), "Нет нужного текста");
+        assertTrue(getDriver().findElement(By.xpath("//span[contains(text(),'Before you start')]")).isDisplayed(), "Нет нужного текста");
 
     }
 
