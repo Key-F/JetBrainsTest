@@ -1,12 +1,14 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.AllureAttachmentsManager;
+import com.example.jetbrainstest.MyExtension;
 import com.example.jetbrainstest.pages.dataspellpages.DataSpellHelpResourcesPage;
 import com.example.jetbrainstest.pages.dataspellpages.DataSpellPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +21,7 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
+@ExtendWith(MyExtension.class)
 public class DataSpellTest extends BaseTest {
 
     private DataSpellPage dt;
@@ -51,7 +53,6 @@ public class DataSpellTest extends BaseTest {
         dt.clickdownLoadExe();
         WebElement masOcIntel = getDriver().findElement(By.xpath("//span[contains(text(),'.dmg (macOS Intel)')]"));
         ((JavascriptExecutor)getDriver()).executeScript("arguments[0].click();", masOcIntel);
-        dt.clickMacOs();
         assertEquals("https://www.jetbrains.com/dataspell/download/download-thanks.html?platform=mac", getDriver().getCurrentUrl(), "Не открылась страница для скачивания");
     }
 
