@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class BaseTest {
-    private static WebDriver driver;
+    static WebDriver driver;
 
     @BeforeEach
     public void setUp() {
