@@ -2,6 +2,7 @@ package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.pages.AcademyPage;
 import com.example.jetbrainstest.pages.spacepages.SpacePage;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,8 @@ public class AcademyTest extends BaseTest {
 
     @BeforeEach
     @Override
+    @Step("Тест ссылок на странице Академии: ")
+
     public void setUp(){
         super.setUp();
         getDriver().get("https://www.jetbrains.com/academy/");

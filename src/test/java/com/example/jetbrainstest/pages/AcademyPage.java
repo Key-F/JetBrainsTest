@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.pages;
 
 import com.example.jetbrainstest.pages.spacepages.SpacePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,10 +21,12 @@ public class AcademyPage {
     @FindBy(xpath = "//h3[contains(text(),'Data science')]")
     private WebElement dataScienceButton;
 
+    @Step("Кликнули по кнопке Science")
     public void clickScienceButton(){
         dataScienceButton.click();
         LOG.info("Кликнули по кнопке Science");
     }
+    @Step("Кликнули по кнопке контактов")
     public void clickContactButton(){
         contactButton.click();
         LOG.info("Кликнули по кнопке контактов");
