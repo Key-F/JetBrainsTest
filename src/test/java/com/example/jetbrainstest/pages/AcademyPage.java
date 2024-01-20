@@ -13,13 +13,18 @@ import org.slf4j.LoggerFactory;
 // page_url = https://www.jetbrains.com/academy/
 public class AcademyPage {
     private final Logger LOG = LoggerFactory.getLogger(AcademyPage.class);
+    private final WebDriver driver;
 
-    WebDriver driver;
     @FindBy(css = "[data-test='button'][href*='email-sales']")
     private WebElement contactButton;
 
     @FindBy(xpath = "//h3[contains(text(),'Data science')]")
     private WebElement dataScienceButton;
+
+    public AcademyPage(WebDriver driver){
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
 
     @Step("Кликнули по кнопке Science")
     public void clickScienceButton(){
@@ -32,9 +37,7 @@ public class AcademyPage {
         LOG.info("Кликнули по кнопке контактов");
     }
 
-    public String getCurrUrl() {return driver.getCurrentUrl();
+    public String getCurrUrl() {
+        return driver.getCurrentUrl();
     }
-    public AcademyPage (WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);}
 }

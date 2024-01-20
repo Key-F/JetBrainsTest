@@ -15,10 +15,10 @@ public class AcademyTest extends BaseTest {
     @BeforeEach
     @Override
     @Step("Тест ссылок на странице Академии: ")
-
     public void setUp(){
         super.setUp();
-        getDriver().get("https://www.jetbrains.com/academy/");
+        driver.get("https://www.jetbrains.com/academy/");
+        academyPage = new AcademyPage(driver);
     }
 
     @Test
@@ -31,7 +31,8 @@ public class AcademyTest extends BaseTest {
     @Test
     @DisplayName("Клик по кнопке Science")
     public void clickScienceButton(){
-        assertEquals("https://hyperskill.org/tracks?category=13&_gl=1%2a18bev8e%2a_ga%2aMTM4NjU2MjcwMC4xNzA0MDA2MTAx%2a_ga_9J976DJZ68%2aMTcwNTQyMzQ5Ni42LjEuMTcwNTQyMzQ5OS41Ny4wLjA.&_ga=2.244982476.854174962.1705414024-1386562700.1704006101", academyPage.getCurrUrl(),"Не перешли на https://www.jetbrains.com/support/sales/#email-sales");
+        academyPage.clickScienceButton();
+        assertEquals("https://hyperskill.org/tracks?category=13", academyPage.getCurrUrl(),"Не перешли на https://www.jetbrains.com/support/sales/#email-sales");
     }
 
 }
