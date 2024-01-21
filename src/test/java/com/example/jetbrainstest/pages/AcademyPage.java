@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.pages;
 
+import com.example.jetbrainstest.AllureLogger;
 import com.example.jetbrainstest.pages.spacepages.SpacePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,8 @@ import org.slf4j.LoggerFactory;
 
 // page_url = https://www.jetbrains.com/academy/
 public class AcademyPage {
-    private final Logger LOG = LoggerFactory.getLogger(AcademyPage.class);
+    //private final Logger LOG = LoggerFactory.getLogger(AcademyPage.class);
+    private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(AcademyPage.class));
     private final WebDriver driver;
 
     @FindBy(css = "[data-test='button'][href*='email-sales']")
@@ -26,12 +28,12 @@ public class AcademyPage {
         PageFactory.initElements(driver, this);
     }
 
-    @Step("Кликнули по кнопке Science")
+
     public void clickScienceButton(){
         dataScienceButton.click();
         LOG.info("Кликнули по кнопке Science");
     }
-    @Step("Кликнули по кнопке контактов")
+
     public void clickContactButton(){
         contactButton.click();
         LOG.info("Кликнули по кнопке контактов");
