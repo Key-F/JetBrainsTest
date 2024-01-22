@@ -31,12 +31,12 @@ public class AcademyPage {
 
     public void clickScienceButton(){
         dataScienceButton.click();
-        LOG.info("Кликнули по кнопке Science");
+        LOG.infoWithScreenshot("Кликнули по кнопке Science");
     }
 
     public void clickContactButton(){
         contactButton.click();
-        LOG.info("Кликнули по кнопке контактов");
+        LOG.infoWithScreenshot("Кликнули по кнопке контактов");
     }
 
     public String getCurrUrl() {

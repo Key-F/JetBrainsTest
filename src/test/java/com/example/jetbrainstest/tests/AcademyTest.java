@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.tests;
 
+import com.example.jetbrainstest.AllureAttachmentsManager;
 import com.example.jetbrainstest.pages.AcademyPage;
 import com.example.jetbrainstest.pages.spacepages.SpacePage;
 import io.qameta.allure.Step;
