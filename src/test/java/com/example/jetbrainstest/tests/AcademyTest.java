@@ -7,9 +7,11 @@ import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+@ExtendWith(AcademyExtension.class)
 public class AcademyTest extends BaseTest {
     private AcademyPage academyPage;
 
@@ -33,7 +35,7 @@ public class AcademyTest extends BaseTest {
     @DisplayName("Клик по кнопке Science")
     public void clickScienceButton(){
         academyPage.clickScienceButton();
-        assertEquals("https://hyperskill.org/tracks?category=13", academyPage.getCurrUrl(),"Не перешли на https://www.jetbrains.com/support/sales/#email-sales");
+        assertEquals("https://hyperskill.org/tracks?category=12", academyPage.getCurrUrl(),"Не перешли на https://www.jetbrains.com/support/sales/#email-sales");
     }
 
 }
