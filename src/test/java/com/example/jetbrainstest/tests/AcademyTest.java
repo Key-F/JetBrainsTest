@@ -138,6 +138,45 @@ public class AcademyTest extends BaseTest {
         String pageTest = academyPage.getText();
         assertTrue(pageTest.contains("Python Backend Developer with Flask"),"Текст Flask не найден на странице");
     }
+    @Test
+    @DisplayName("Клик по кнопке JetBrains Privacy Policy")
+    public void clickPrivacyPolicy(){
+        academyPage.clickPrivacyPolicy();
+        assertEquals("https://www.jetbrains.com/legal/docs/privacy/privacy/",academyPage.getCurrUrl(),"Не перешли в Privacy Policy");
+        String pageTest = academyPage.getText();
+        assertTrue(pageTest.contains("JetBrains Privacy Policy"),"JetBrains Privacy Policy");
+    }
+    @Test
+    @DisplayName("Клик по кнопке third-party services")
+    public void clickThirdParty(){
+        academyPage.clickThirdParty();
+        assertEquals("https://www.jetbrains.com/legal/docs/privacy/third-parties/",academyPage.getCurrUrl(),"Не перешли в third-party services ");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Study in an IDE")
+    public void clickStudyIDE(){
+        academyPage.clickStudyIDE();
+        assertEquals("https://plugins.jetbrains.com/education",academyPage.getCurrUrl(),"Не перешли в Study in an IDE");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Educate others")
+    public void clickEducate(){
+        academyPage.clickEducate();
+        assertEquals("https://www.jetbrains.com/pages/academy/teaching/",academyPage.getCurrUrl(),"Не перешли в Educate");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Study Offline")
+    public void clickStudyOffline(){
+        academyPage.clickStudyOffline();
+        assertEquals("https://www.jetbrains.com/education/university-relations/",academyPage.getCurrUrl(),"Не перешли на страницу Study Offline");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Read the full interview")
+    public void clickInterview(){
+        academyPage.clickInterviewButton();
+        assertEquals("https://blog.jetbrains.com/education/2021/06/08/joviane-bellegarde-compliments-her-university-studies-with-jetbrains-academy/",academyPage.getCurrUrl(),"Не перешли на страницу с интервью");
+    }
+
 
 }
 

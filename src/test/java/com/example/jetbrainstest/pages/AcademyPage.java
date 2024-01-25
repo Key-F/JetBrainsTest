@@ -48,6 +48,19 @@ public class AcademyPage {
     private WebElement Frontenddevelopment;
     @FindBy(xpath = "//h4[contains(text(), 'Flask')]")
     private WebElement Flask;
+    @FindBy(xpath = "//a[contains(text(),'JetBrains Privacy Policy')]")
+    private WebElement Privacy;
+    @FindBy(xpath = "//a[contains(text(),'third-party services')]")
+    private WebElement ThirdParty;
+    @FindBy(xpath = "//a[contains(text(),'Study in an IDE')]")
+    private WebElement StudyIDE;
+    @FindBy(xpath = "//a[contains(text(),'Educate others')]")
+    private WebElement Educate;
+    @FindBy(xpath = "//a[contains(text(),'Study offline')]")
+    private WebElement StudyOffline;
+    @FindBy(xpath = "//h3[contains(text(), 'Joviane Bellegarde')]/../following-sibling::p//a[contains(text(), 'Read the full interview')]\n")
+    private WebElement Interview;
+
 
 
     @FindBy(css = "button[data-test='button'][type='submit']")
@@ -112,6 +125,30 @@ public class AcademyPage {
     public void clickFlaskButton(){
         Flask.click();
         LOG.infoWithScreenshot("Кликнули по кнопке Flask");
+    }
+    public void clickPrivacyPolicy(){
+        Privacy.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Privacy");
+    }
+    public void clickThirdParty(){
+        ThirdParty.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке ThirdParty");
+    }
+    public void clickStudyIDE(){
+        StudyIDE.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Study in an IDE");
+    }
+    public  void clickEducate(){
+        Educate.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Educate others");
+    }
+    public void clickStudyOffline(){
+        StudyOffline.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке StudyOffline");
+    }
+    public void clickInterviewButton(){
+        Interview.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Interview");
     }
 
     public String getText(){
