@@ -36,10 +36,19 @@ public class AcademyPage {
     private WebElement Twitter;
     @FindBy(xpath = "//a[contains(text(), 'Our bug and issue tracker')]")
     private WebElement BugTracker;
+    @FindBy(xpath = "//h3[contains(text(), 'Machine learning')]")
+    private WebElement Machinelearning;
     @FindBy(xpath = "//input[@placeholder='Email address']")
     private WebElement emailAddress;
     @FindBy(xpath = "//textarea[@placeholder='Your feedback']")
     private WebElement feedBack;
+    @FindBy(xpath = "//h3[contains(text(), 'Web development')]")
+    private WebElement Webdevelopment;
+    @FindBy(xpath = "//h3[contains(text(), 'Frontend development')]")
+    private WebElement Frontenddevelopment;
+    @FindBy(xpath = "//h4[contains(text(), 'Flask')]")
+    private WebElement Flask;
+
 
     @FindBy(css = "button[data-test='button'][type='submit']")
     private WebElement submitButton;
@@ -87,27 +96,27 @@ public class AcademyPage {
     public void clickBugTracker(){
         BugTracker.click();
         LOG.infoWithScreenshot("Кликнули по кнопке Our bug and issue tracker");
-
-
+    }
+    public void clickMachineLearning(){
+        Machinelearning.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Machine learning");
+    }
+    public void clickWebDevelopmentButton(){
+        Webdevelopment.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Web development");
+    }
+    public void clickFrontenddevelopmentButton(){
+        Frontenddevelopment.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Frontend development");
+    }
+    public void clickFlaskButton(){
+        Flask.click();
+        LOG.infoWithScreenshot("Кликнули по кнопке Flask");
     }
 
-    public String getPythontext(){
+    public String getText(){
         return driver.findElement(By.tagName("body")).getText();
     }
-    public String getSqlText(){
-        return driver.findElement(By.tagName("body")).getText();
-    }
-
-    public String getJavaText() {
-        return driver.findElement(By.tagName("body")).getText();
-    }
-    public String getLearText(){
-        return  driver.findElement(By.tagName("body")).getText();
-    }
-    public String getBlogText(){
-        return driver.findElement(By.tagName("body")).getText();
-    }
-
 
     public void enterEmail(String email){
         emailAddress.sendKeys(email);

@@ -59,7 +59,7 @@ public class AcademyTest extends BaseTest {
     public void clickPythonButton(){
         academyPage.clickPythonButton();
         assertEquals("https://academy.jetbrains.com/?tag=Python&_gl=1", academyPage.getCurrUrl(),"Не перешли на https://academy.jetbrains.com/?tag=Python&_gl");
-        String pageText = academyPage.getPythontext();
+        String pageText = academyPage.getText();
         assertTrue(pageText.contains("Python"), "Текст 'Python' не найден на странице");
     }
     @Test
@@ -67,7 +67,7 @@ public class AcademyTest extends BaseTest {
     public void clickSqlButton(){
         academyPage.clickSqlButton();
         assertEquals("https://hyperskill.org/tracks?category=9&_gl=1", academyPage.getCurrUrl(),"Не перешли на https://hyperskill.org/tracks?category=9&_gl=1");
-        String pageText = academyPage.getSqlText();
+        String pageText = academyPage.getText();
         assertTrue(pageText.contains("SQL and Databases"), "Текст 'SQL and Databases' не найден на странице");
     }
     @Test
@@ -75,40 +75,69 @@ public class AcademyTest extends BaseTest {
     public void clickJavaButton() {
         academyPage.clickJavaButton();
         assertEquals("https://academy.jetbrains.com/?tag=Java&_gl=1", academyPage.getCurrUrl(), "Не перешли на https://academy.jetbrains.com/?tag=Java&_gl");
-        String pageText = academyPage.getJavaText();
+        String pageText = academyPage.getText();
         assertTrue(pageText.contains("JAVA"), "Текст 'JAVA' не найден на странице");
     }
     @Test
     @DisplayName("Клик по кнопке Learn by doing")
-    public void clickLeranBd(){
+    public void clickLeranBdButton(){
         academyPage.clickLearnBd();
         assertEquals("https://hyperskill.org/tracks?", academyPage.getCurrUrl(),"Не перешли на https://hyperskill.org/tracks?_gl=");
-        String pageText = academyPage.getLearText();
+        String pageText = academyPage.getText();
         assertTrue(pageText.contains(" All tracks "),"Текст 'All tracks' не найден на странице");
     }
     @Test
     @DisplayName("Клик по кнопке The JetBrains Academy blog")
-    public void clickAcademyblog(){
+    public void clickAcademyblogButton(){
         academyPage.clickAcademyBlog();
         assertEquals("https://blog.jetbrains.com/education/",academyPage.getCurrUrl(),"Не перешли на https://blog.jetbrains.com/education");
-        String pageText = academyPage.getBlogText();
+        String pageText = academyPage.getText();
         assertTrue(pageText.contains("The JetBrains Academy Blog"),"Текст 'The JetBrains Academy Blog' не найден на странице");
     }
     @Test
     @DisplayName("Клик по кнопке @JetBrains_Edu on X")
-    public void twitterPageBlog(){
+    public void twitterPageBlogButton(){
         academyPage.clickTwitter();
         assertEquals("https://twitter.com/JetBrains_Edu", academyPage.getCurrUrl(),"Не перешли в twitter");
     }
     @Test
     @DisplayName("Клик по кнопке Our bug and issue tracker")
-    public void bugTracker(){
+    public void bugTrackerButton(){
         academyPage.clickBugTracker();
         assertEquals("https://youtrack.jetbrains.com/issues?q=project:%20%7BEDU%7D&_gl=1/",academyPage.getCurrUrl(),"Не перешли в https://youtrack.jetbrains.com/");
     }
-
-
-
+    @Test
+    @DisplayName("Клик по кнопке Machine learning")
+    public void machineLearningButton(){
+        academyPage.clickMachineLearning();
+        assertEquals("https://hyperskill.org/tracks/42?category=13&_gl=1",academyPage.getCurrUrl(),"Не перешли в Machine learning");
+        String pageTest = academyPage.getText();
+        assertTrue(pageTest.contains("Machine Learning Algorithms from Scratch"),"Текст Machine Learning Algorithms from Scratch не найден на странице");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Web development")
+    public void webDevelopmentButton(){
+        academyPage.clickWebDevelopmentButton();
+        assertEquals("erskill.org/tracks/29?category=1",academyPage.getCurrUrl(),"Не перешли в Web development");
+        String pageTest = academyPage.getText();
+        assertTrue(pageTest.contains("Python Backend Developer with Flask"),"Текст Python Backend Developer with Flask не найден на странице");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Frontend development")
+    public void clickFrontenddevelopmentButton(){
+        academyPage.clickFrontenddevelopmentButton();
+        assertEquals("https://hyperskill.org/tracks?category=11",academyPage.getCurrUrl(),"Не перешли в Frontend development");
+        String pageTest = academyPage.getText();
+        assertTrue(pageTest.contains(" Frontend "),"Текст  Frontend  не найден на странице");
+    }
+    @Test
+    @DisplayName("Клик по кнопке Flask")
+    public void clickFlaskButton(){
+        academyPage.clickFlaskButton();
+        assertEquals("https://hyperskill.org/tracks/29?category=8",academyPage.getCurrUrl(),"Не перешли в Flask");
+        String pageTest = academyPage.getText();
+        assertTrue(pageTest.contains("Python Backend Developer with Flask"),"Текст Flask не найден на странице");
+    }
 
 }
 
