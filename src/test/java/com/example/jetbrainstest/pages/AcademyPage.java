@@ -12,9 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-// page_url = https://www.jetbrains.com/academy/
 public class AcademyPage {
-    //private final Logger LOG = LoggerFactory.getLogger(AcademyPage.class);
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(AcademyPage.class));
     private final WebDriver driver;
 
