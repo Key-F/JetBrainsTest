@@ -1,6 +1,5 @@
 package com.example.jetbrainstest.pages;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,13 +14,18 @@ public class RustRoverPage
     WebDriver driver;
     @FindBy(css = "a[href='/rust/download/']")
     private WebElement downloadRustPreview;
+    @FindBy(css = "button[aria-label='Education: Open submenu']")
+    private WebElement educationDropDown;
 
-    @Step ("Checking if URL changed after button has been clicked")
     public String clickRustDownloadAndCheckUrl(){
         LOG.info("Checking if URL changed after button has been clicked");
         driver.get("https://www.jetbrains.com/rust/");
         downloadRustPreview.click();
         return driver.getCurrentUrl();
+    }
+    public void getEducationPage() {
+        educationDropDown.click();
+        LOG.info("Clicking on education link");
     }
     public RustRoverPage(WebDriver driver){
         this.driver = driver;
