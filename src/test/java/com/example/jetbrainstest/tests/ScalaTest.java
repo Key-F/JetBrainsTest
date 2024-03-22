@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 
+import com.example.jetbrainstest.AllureAttachmentsManager;
 import com.example.jetbrainstest.pages.ScalaPage;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -23,10 +24,12 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Проверка, что кнопка скачивания активна")
     public void buttonCheck() {
+        AllureAttachmentsManager.screenshot();
         assertTrue(scalaPage.checkIfGetButtonIsClickable(), "Кнопка скачивания не активна");
     }
 
     @Test
+    @DisplayName("Проверка наличия кнопки Show More")
     public void scalaPagefindButtonShowMore() {
         assertTrue(scalaPage.findButtonShowMore(), "кнопка" + "Show More" + "не найдена");
     }
