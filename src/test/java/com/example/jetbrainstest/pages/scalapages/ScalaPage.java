@@ -1,14 +1,12 @@
-package com.example.jetbrainstest.pages;
+package com.example.jetbrainstest.pages.scalapages;
 
 import com.example.jetbrainstest.AllureLogger;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
@@ -25,6 +23,8 @@ public class ScalaPage {
     private WebElement versions;
     @FindBy(xpath = "//*[contains(text(),'Show More')]")
     private WebElement showMore;
+    @FindBy(xpath = "//*[contains(text(),'nightly')]")
+    private WebElement nightly;
 
     public Boolean checkIfGetButtonIsClickable() {
         LOG.infoWithScreenshot("Проверка активности кнопки загрузки");
@@ -37,6 +37,12 @@ public class ScalaPage {
         versions.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(showMore));
         return showMore.isDisplayed();
+    }
+    public boolean findButtonNightly (){
+        LOG.infoWithScreenshot("Проверка наличия кнопки nightly");
+        versions.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(nightly));
+        return nightly.isDisplayed();
     }
 
     public ScalaPage(WebDriver driver) {
