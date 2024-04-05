@@ -34,8 +34,22 @@ public class ScalaReportIssuePages {
         Reviews.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(ReportIssueButton));
         ReportIssueButton.click();
-
     }
+    public String getTabUrl(WebDriver driver) {
+        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        return getCurrentUrl();
+    }
+    public void checklearnMoreclick(){
+        Reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(LearnMore));
+        LearnMore.click();
+    }
+    public String getCurrentUrl() {
+        String url = driver.getCurrentUrl();
+        return url;
+    }
+
     public boolean learnMoreclick(){
         Reviews.click();
         return LearnMore.isEnabled();
