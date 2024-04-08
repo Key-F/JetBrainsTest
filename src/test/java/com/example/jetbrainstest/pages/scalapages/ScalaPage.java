@@ -25,14 +25,20 @@ public class ScalaPage {
     private WebElement showMore;
     @FindBy(xpath = "//*[contains(text(),'nightly')]")
     private WebElement nightly;
+    @FindBy(xpath = "//*[contains(text(),'eap')]")
+    private WebElement eap;
+    @FindBy(xpath = "//*[contains(text(),'Stable')]")
+    private WebElement stable;
 
-    public Boolean checkIfGetButtonIsClickable() {
+
+
+    public boolean checkIfGetButtonIsClickable() {
         LOG.infoWithScreenshot("Проверка активности кнопки загрузки");
         wait.until(ExpectedConditions.visibilityOfAllElements(getButton));
         return getButton.isEnabled();
     }
 
-    public Boolean findButtonShowMore() {
+    public boolean findButtonShowMore() {
         LOG.info("Проверка наличия кнопки 'Show More'");
         versions.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(showMore));
@@ -43,6 +49,18 @@ public class ScalaPage {
         versions.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(nightly));
         return nightly.isDisplayed();
+    }
+    public boolean findButtonEap (){
+        LOG.infoWithScreenshot("Проверка наличия кнопки EAP");
+        versions.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(nightly));
+        return eap.isDisplayed();
+    }
+
+    public boolean checkStable() {
+        LOG.infoWithScreenshot("Проверка активности кнопки Stable");
+        versions.click();
+        return stable.isEnabled();
     }
 
     public ScalaPage(WebDriver driver) {

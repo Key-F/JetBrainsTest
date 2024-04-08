@@ -36,10 +36,19 @@ public class ScalaJetBrainsMarketplacePage {
         return startSellingPlugins.isEnabled();
     }
 
+    public void checkMarketplace(){
+        Reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(LearnMore));
+        LearnMore.click();
+        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+    }
 
     public ScalaJetBrainsMarketplacePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(6));
     }
+
+
 }
