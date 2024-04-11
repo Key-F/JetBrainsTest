@@ -21,27 +21,28 @@ public class ScalaJetBrainsMarketplacePage {
     @FindBy(xpath = "//*[contains(text(),'Start Selling Plugins')]")
     private WebElement startSellingPlugins;
     @FindBy(xpath = "//*[contains(text(),'Reviews')]")
-    private WebElement Reviews;
+    private WebElement reviews;
     @FindBy(xpath = "//*[contains(text(),'Learn more')]")
-    private WebElement LearnMore;
+    private WebElement learnMore;
 
 
-    public Boolean clickStartSellingPlugins(){
-        Reviews.click();
-        wait.until(ExpectedConditions.visibilityOfAllElements(LearnMore));
-        LearnMore.click();
+    public boolean clickStartSellingPlugins() {
+        LOG.infoWithScreenshot("Проверка наличия кнопки Start Selling Plugins");
+        reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(learnMore));
+        learnMore.click();
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         wait.until(ExpectedConditions.visibilityOfAllElements(startSellingPlugins));
         return startSellingPlugins.isEnabled();
     }
 
-    public void checkMarketplace(){
-        Reviews.click();
-        wait.until(ExpectedConditions.visibilityOfAllElements(LearnMore));
-        LearnMore.click();
-        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
+    public void checkMarketplace() {
+        LOG.infoWithScreenshot("Проверка перехода на страницу JetBrains Marketplace при нажатие кнопки Learn more");
+        reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(learnMore));
+        learnMore.click();
+
     }
 
     public ScalaJetBrainsMarketplacePage(WebDriver driver) {

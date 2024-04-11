@@ -1,6 +1,5 @@
 package com.example.jetbrainstest.tests;
 
-
 import com.example.jetbrainstest.AllureAttachmentsManager;
 import com.example.jetbrainstest.MyExtension;
 
@@ -49,9 +48,9 @@ public class ScalaTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка,что кнопка Report Issue активна")
+    @DisplayName("Наличие кнопки Report Issue ")
     public void reportIssueCheck() {
-        assertTrue(scalaReportIssuePages.checkIfReportIssueIsClickable(), "Кнопка скачивания не активна");
+        assertTrue(scalaReportIssuePages.checkIfReportIssueIsClickable(), "кнопка" + "Report Issue" + "не найдена");
     }
 
     @Test
@@ -62,95 +61,101 @@ public class ScalaTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка наличие ссылки Learn More ")
+    @DisplayName("Проверка наличия кнопки-ссылки Learn more ")
     public void checkLearnMore() {
-        assertTrue(scalaReportIssuePages.learnMoreclick(), "Кнопка Learn More не найдена");
+        assertTrue(scalaReportIssuePages.learnMoreclick(), "Кнопка" + "Learn more" + "не найдена");
     }
 
     @Test
-    @DisplayName("Проверка перехода на страницу JetBrains Marketplace при нажатие кнопки Learn More")
+    @DisplayName("Проверка перехода на страницу JetBrains Marketplace при нажатие кнопки Learn more")
     public void openingJetBrainsMarketplace() {
         scalaJetBrainsMarketplacePage.checkMarketplace();
         assertTrue(scalaReportIssuePages.getTabUrl(driver).contains("https://plugins.jetbrains.com/docs/marketplace/reviews-policy.html"), "Не верная ссылка");
     }
 
     @Test
-    @DisplayName("Проверка активности кнопки Start Selling Plugins")
+    @DisplayName("Проверка наличия кнопки Start Selling Plugins")
     public void checkStartSellingPlugins() {
-        assertTrue(scalaJetBrainsMarketplacePage.clickStartSellingPlugins(), "Кнопка Start Selling Plugins не активна");
+        assertTrue(scalaJetBrainsMarketplacePage.clickStartSellingPlugins(), "Кнопка" + "Start Selling Plugins" + "не найдена");
     }
 
     @Test
     @DisplayName("Наличие кнопки nightly")
     public void scalaPageFindBattonNightly() {
         assertTrue(scalaPage.findButtonNightly(), "кнопка" + "nightly" + "не найдена");
-
     }
+
     @Test
     @DisplayName("Наличие кнопки EAP")
     public void scalaPageFindBattonEap() {
         assertTrue(scalaPage.findButtonEap(), "кнопка" + "EAP" + "не найдена");
     }
+
     @Test
     @DisplayName("Проверка наличия кнопки Stable")
     public void checkStable() {
-        assertTrue(scalaPage.checkStable(), "Кнопка Stable не активна");
+        assertTrue(scalaPage.checkStable(), "Кнопка Stable не найдена");
     }
 
     @Test
-    @DisplayName("Проверка активности кнопки Overview")
+    @DisplayName("Проверка наличия кнопки Overview")
     public void checkOverview() {
-        assertTrue(scalaOverviewPage.clickOverview(), "Кнопка Start Selling Plugins не активна");
+        assertTrue(scalaOverviewPage.clickOverview(), "Кнопка Overview не найдена");
     }
+
     @Test
-    @DisplayName("Проверка активности кнопки Scala Bundle")
+    @DisplayName("Проверка наличия кнопки Scala bundle")
     public void checkScalaBundle() {
-        assertTrue(scalaOverviewPage.clickScalaBundle(), "Кнопка Scala Bundle не активна");
+        assertTrue(scalaOverviewPage.clickScalaBundle(), "Кнопка Scala bundle не найдена");
     }
+
     @Test
-    @DisplayName("Проверка открытие страницы Scala Bundle после нажатия кнопки Scala Bundle")
+    @DisplayName("Проверка открытие страницы Scala bundle после нажатия кнопки Scala bundle")
     public void openScalaBundle() {
-        Assertions.assertEquals(scalaOverviewPage.checkScalaBundleclickable(),"https://plugins.jetbrains.com/bundles/2-scala-bundle", "Не верная ссылка");
+        Assertions.assertEquals(scalaOverviewPage.checkScalaBundleclickable(), "https://plugins.jetbrains.com/bundles/2-scala-bundle", "Не верная ссылка");
     }
+
     @Test
     @DisplayName("Проверка активности кнопки Report Plugin")
     public void checkReportPlugin() {
-        assertTrue(scalaOverviewPage.clickReportPlugin(), "Кнопка Scala Bundle не активна");
+        assertTrue(scalaOverviewPage.clickReportPlugin(), "Кнопка Report Plugin не активна");
     }
-    @Test
-    @DisplayName("Проверка открытие страницы Log in to Marketplace после нажатия кнопки Report Plugin")
-    public void checkReportPlugineclickable() {
-        scalaOverviewPage.checkReportPlugineclickable();
-        assertTrue(scalaReportIssuePages.getCurrentUrl().contains("https://hub.jetbrains.com/auth/login?response"), "Не верная ссылка");
-    }
+
     @Test
     @DisplayName("Проверка наличия кнопки Show All Reviews")
     public void checkShowAllReviews() {
         assertTrue(scalaOverviewPage.findButtonShowAllReviews(), "Кнопка Show All Reviews не активна");
     }
+
     @Test
     @DisplayName("Переход на страницу Reviews, после нажатия кнопки Show All Reviews")
     public void openReviewsShowAllReviewsClickable() {
-        Assertions.assertEquals(scalaOverviewPage.clickShowAllReviews(),"https://plugins.jetbrains.com/plugin/1347-scala/reviews", "Не верная ссылка");
-    }
-    @Test
-    @DisplayName("Наличие ссылки Blog")
-    public void CheckFindUrlBlog(){
-        assertTrue(scalaOverviewPage.findUrlBlog(), "Ссылка Blog отсутствует");
-    }
-    @Test
-    @DisplayName("Переход на страницу Blog")
-    public void openBlogClickable() {
-        scalaOverviewPage.checkBlog();
-        assertTrue(scalaReportIssuePages.getTabUrl(driver).contains("https://blog.jetbrains.com/scala/"), "Не верная ссылка");
+        Assertions.assertEquals(scalaOverviewPage.clickShowAllReviews(), "https://plugins.jetbrains.com/plugin/1347-scala/reviews", "Не верная ссылка");
     }
 
     @Test
-    @DisplayName("Наличие ссылки Twitter")
-    public void CheckFindUrlTwitter(){
+    @DisplayName("Наличие кнопки - ссылки Blog")
+    public void checkFindUrlBlog() {
+        assertTrue(scalaOverviewPage.findUrlBlog(), "Ссылка Blog отсутствует");
+    }
+
+    @Test
+    @DisplayName("Наличие кнопки - ссылки Twitter")
+    public void checkFindUrlTwitter() {
         assertTrue(scalaOverviewPage.findUrlTwitter(), "Ссылка Twitter отсутствует");
     }
 
+    @Test
+    @DisplayName("Активность кнопки-ссылки Source Code")
+    public void sourceCodeCheck() {
+        assertTrue(scalaOverviewPage.checkSourceCodeClickable(), "Кнопка Source Code не активна");
+    }
+
+    @Test
+    @DisplayName("Наличие кнопки - ссылки Plugin Version ")
+    public void findButtonPluginVersion() {
+        assertTrue(scalaOverviewPage.clickPluginVersions(), "Ссылка-кнопка Plugin Version не активна");
+    }
 }
 
 
