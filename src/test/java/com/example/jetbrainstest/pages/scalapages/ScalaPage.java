@@ -27,7 +27,7 @@ public class ScalaPage {
     private WebElement nightly;
     @FindBy(xpath = "//*[contains(text(),'eap')]")
     private WebElement eap;
-    @FindBy(xpath = "//*[contains(text(),'Stable')]")
+    @FindBy(css = "div.text-capitalize")
     private WebElement stable;
 
 
@@ -58,7 +58,7 @@ public class ScalaPage {
     }
 
     public boolean checkStable() {
-        LOG.infoWithScreenshot("Проверка активности кнопки Stable");
+        LOG.infoWithScreenshot("Проверка наличия кнопки Stable");
         versions.click();
         return stable.isEnabled();
     }

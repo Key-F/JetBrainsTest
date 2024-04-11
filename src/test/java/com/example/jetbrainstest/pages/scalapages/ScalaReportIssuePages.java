@@ -18,22 +18,22 @@ public class ScalaReportIssuePages {
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(ScalaPage.class));
     WebDriver driver;
     @FindBy(xpath = "//*[contains(text(),'Report Issue')]")
-    private WebElement ReportIssueButton;
+    private WebElement reportIssueButton;
     @FindBy(xpath = "//*[contains(text(),'Reviews')]")
-    private WebElement Reviews;
+    private WebElement reviews;
     @FindBy(xpath = "//*[contains(text(),'Learn more')]")
-    private WebElement LearnMore;
+    private WebElement learnMore;
 
     public Boolean checkIfReportIssueIsClickable() {
-        LOG.infoWithScreenshot("Проверка активности кнопки Report Issue");
-        Reviews.click();
-        return ReportIssueButton.isEnabled();
+        LOG.infoWithScreenshot("Проверка наличия кнопки Report Issue");
+        reviews.click();
+        return reportIssueButton.isDisplayed();
     }
     public void checkYouTrackclickable() {
         LOG.infoWithScreenshot("Проверка открытия страницы You Track, после нажатия кнопки Report Issue");
-        Reviews.click();
-        wait.until(ExpectedConditions.visibilityOfAllElements(ReportIssueButton));
-        ReportIssueButton.click();
+        reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(reportIssueButton));
+        reportIssueButton.click();
     }
     public String getTabUrl(WebDriver driver) {
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
@@ -41,9 +41,9 @@ public class ScalaReportIssuePages {
         return getCurrentUrl();
     }
     public void checklearnMoreclick(){
-        Reviews.click();
-        wait.until(ExpectedConditions.visibilityOfAllElements(LearnMore));
-        LearnMore.click();
+        reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(learnMore));
+        learnMore.click();
     }
     public String getCurrentUrl() {
         String url = driver.getCurrentUrl();
@@ -51,8 +51,8 @@ public class ScalaReportIssuePages {
     }
 
     public boolean learnMoreclick(){
-        Reviews.click();
-        return LearnMore.isEnabled();
+        reviews.click();
+        return learnMore.isEnabled();
     }
 
     public ScalaReportIssuePages(WebDriver driver) {
