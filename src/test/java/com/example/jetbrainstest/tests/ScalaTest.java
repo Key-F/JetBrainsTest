@@ -44,13 +44,13 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Проверка наличия кнопки Show More")
     public void scalaPagefindButtonShowMore() {
-        assertTrue(scalaPage.findButtonShowMore(), "кнопка" + "Show More" + "не найдена");
+        assertTrue(scalaPage.findButtonShowMore(), "кнопка Show More не найдена");
     }
 
     @Test
     @DisplayName("Наличие кнопки Report Issue ")
     public void reportIssueCheck() {
-        assertTrue(scalaReportIssuePages.checkIfReportIssueIsClickable(), "кнопка" + "Report Issue" + "не найдена");
+        assertTrue(scalaReportIssuePages.checkIfReportIssueIsClickable(), "кнопка Report Issue не найдена");
     }
 
     @Test
@@ -63,7 +63,7 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Проверка наличия кнопки-ссылки Learn more ")
     public void checkLearnMore() {
-        assertTrue(scalaReportIssuePages.learnMoreclick(), "Кнопка" + "Learn more" + "не найдена");
+        assertTrue(scalaReportIssuePages.learnMoreclick(), "Кнопка Learn more не найдена");
     }
 
     @Test
@@ -76,19 +76,19 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Проверка наличия кнопки Start Selling Plugins")
     public void checkStartSellingPlugins() {
-        assertTrue(scalaJetBrainsMarketplacePage.clickStartSellingPlugins(), "Кнопка" + "Start Selling Plugins" + "не найдена");
+        assertTrue(scalaJetBrainsMarketplacePage.clickStartSellingPlugins(), "Кнопка Start Selling Plugins не найдена");
     }
 
     @Test
     @DisplayName("Наличие кнопки nightly")
     public void scalaPageFindBattonNightly() {
-        assertTrue(scalaPage.findButtonNightly(), "кнопка" + "nightly" + "не найдена");
+        assertTrue(scalaPage.findButtonNightly(), "кнопка nightly не найдена");
     }
 
     @Test
     @DisplayName("Наличие кнопки EAP")
     public void scalaPageFindBattonEap() {
-        assertTrue(scalaPage.findButtonEap(), "кнопка" + "EAP" + "не найдена");
+        assertTrue(scalaPage.findButtonEap(), "кнопка EAP не найдена");
     }
 
     @Test
@@ -112,7 +112,9 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Проверка открытие страницы Scala bundle после нажатия кнопки Scala bundle")
     public void openScalaBundle() {
-        Assertions.assertEquals(scalaOverviewPage.checkScalaBundleclickable(), "https://plugins.jetbrains.com/bundles/2-scala-bundle", "Не верная ссылка");
+        Assertions.assertEquals(scalaOverviewPage.checkScalaBundleclickable(),
+                "https://plugins.jetbrains.com/bundles/2-scala-bundle",
+                "Не верная ссылка");
     }
 
     @Test
@@ -130,7 +132,9 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Переход на страницу Reviews, после нажатия кнопки Show All Reviews")
     public void openReviewsShowAllReviewsClickable() {
-        Assertions.assertEquals(scalaOverviewPage.clickShowAllReviews(), "https://plugins.jetbrains.com/plugin/1347-scala/reviews", "Не верная ссылка");
+        Assertions.assertEquals(scalaOverviewPage.clickShowAllReviews(),
+                "https://plugins.jetbrains.com/plugin/1347-scala/reviews",
+                "Не верная ссылка");
     }
 
     @Test
