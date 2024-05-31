@@ -25,7 +25,6 @@ public class ScalaJetBrainsMarketplacePage {
     @FindBy(xpath = "//*[contains(text(),'Learn more')]")
     private WebElement learnMore;
 
-
     public boolean clickStartSellingPlugins() {
         LOG.infoWithScreenshot("Проверка наличия кнопки Start Selling Plugins");
         reviews.click();
@@ -36,7 +35,6 @@ public class ScalaJetBrainsMarketplacePage {
         wait.until(ExpectedConditions.visibilityOfAllElements(startSellingPlugins));
         return startSellingPlugins.isEnabled();
     }
-
     public void checkMarketplace() {
         LOG.infoWithScreenshot("Проверка перехода на страницу JetBrains Marketplace при нажатие кнопки Learn more");
         reviews.click();
@@ -44,7 +42,6 @@ public class ScalaJetBrainsMarketplacePage {
         learnMore.click();
 
     }
-
     public ScalaJetBrainsMarketplacePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

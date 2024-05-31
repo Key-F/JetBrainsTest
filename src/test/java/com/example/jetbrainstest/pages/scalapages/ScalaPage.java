@@ -30,8 +30,6 @@ public class ScalaPage {
     @FindBy(css = "div.text-capitalize")
     private WebElement stable;
 
-
-
     public boolean checkIfGetButtonIsClickable() {
         LOG.infoWithScreenshot("Проверка активности кнопки загрузки");
         wait.until(ExpectedConditions.visibilityOfAllElements(getButton));
@@ -44,13 +42,15 @@ public class ScalaPage {
         wait.until(ExpectedConditions.visibilityOfAllElements(showMore));
         return showMore.isDisplayed();
     }
-    public boolean findButtonNightly (){
+
+    public boolean findButtonNightly() {
         LOG.infoWithScreenshot("Проверка наличия кнопки nightly");
         versions.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(nightly));
         return nightly.isDisplayed();
     }
-    public boolean findButtonEap (){
+
+    public boolean findButtonEap() {
         LOG.infoWithScreenshot("Проверка наличия кнопки EAP");
         versions.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(nightly));

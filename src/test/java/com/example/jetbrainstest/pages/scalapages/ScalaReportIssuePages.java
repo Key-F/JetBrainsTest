@@ -29,28 +29,26 @@ public class ScalaReportIssuePages {
         reviews.click();
         return reportIssueButton.isDisplayed();
     }
+
     public void checkYouTrackclickable() {
         LOG.infoWithScreenshot("Проверка открытия страницы You Track, после нажатия кнопки Report Issue");
         reviews.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(reportIssueButton));
         reportIssueButton.click();
     }
+
     public String getTabUrl(WebDriver driver) {
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         return getCurrentUrl();
     }
-    public void checklearnMoreclick(){
-        reviews.click();
-        wait.until(ExpectedConditions.visibilityOfAllElements(learnMore));
-        learnMore.click();
-    }
+
     public String getCurrentUrl() {
         String url = driver.getCurrentUrl();
         return url;
     }
 
-    public boolean learnMoreclick(){
+    public boolean learnMoreclick() {
         reviews.click();
         return learnMore.isEnabled();
     }
