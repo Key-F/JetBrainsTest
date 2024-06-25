@@ -27,6 +27,7 @@ public class ScalaReportIssuePages {
     public Boolean checkIfReportIssueIsClickable() {
         LOG.infoWithScreenshot("Проверка наличия кнопки Report Issue");
         reviews.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(reportIssueButton));
         return reportIssueButton.isDisplayed();
     }
 
@@ -37,7 +38,7 @@ public class ScalaReportIssuePages {
         reportIssueButton.click();
     }
 
-    public String getTabUrl(WebDriver driver) {
+    public String getTabUrl() {
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         return getCurrentUrl();
@@ -56,7 +57,7 @@ public class ScalaReportIssuePages {
     public ScalaReportIssuePages(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
 

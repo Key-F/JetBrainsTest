@@ -57,7 +57,7 @@ public class ScalaTest extends BaseTest {
     @DisplayName("Проверка открытие страницы You Track после нажатия кнопки Report Issue")
     public void checkYouTrack() {
         scalaReportIssuePages.checkYouTrackclickable();
-        assertTrue(scalaReportIssuePages.getTabUrl(driver).contains("https://youtrack.jetbrains.com/issues/SCL?_gl=1*"), "Не верная ссылка");
+        assertTrue(scalaReportIssuePages.getTabUrl().contains("https://youtrack.jetbrains.com/issues/SCL?_gl=1*"), "Не верная ссылка");
     }
 
     @Test
@@ -70,7 +70,7 @@ public class ScalaTest extends BaseTest {
     @DisplayName("Проверка перехода на страницу JetBrains Marketplace при нажатие кнопки Learn more")
     public void openingJetBrainsMarketplace() {
         scalaJetBrainsMarketplacePage.checkMarketplace();
-        assertTrue(scalaReportIssuePages.getTabUrl(driver).contains("https://plugins.jetbrains.com/docs/marketplace/reviews-policy.html"), "Не верная ссылка");
+        assertTrue(scalaReportIssuePages.getTabUrl().contains("https://plugins.jetbrains.com/docs/marketplace/reviews-policy.html"), "Не верная ссылка");
     }
 
     @Test
