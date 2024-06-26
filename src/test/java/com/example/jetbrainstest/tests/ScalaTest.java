@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.openqa.selenium.By;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -32,6 +33,7 @@ public class ScalaTest extends BaseTest {
         scalaReportIssuePages = new ScalaReportIssuePages(getDriver());
         scalaJetBrainsMarketplacePage = new ScalaJetBrainsMarketplacePage(getDriver());
         scalaOverviewPage = new ScalaOverviewPage(getDriver());
+        getDriver().findElement(By.cssSelector("[aria-label='Close cookies banner']")).click();
     }
 
     @Test
