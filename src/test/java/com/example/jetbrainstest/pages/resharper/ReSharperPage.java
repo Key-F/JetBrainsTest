@@ -5,17 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 // https://www.jetbrains.com/resharper/
 
 public class ReSharperPage {
 
-    private WebDriver driver;
-
     @FindBy(css = "a[href=\"/resharper/download/\"]")
     private WebElement downloadLink;
 
-    @FindBy(css = "#consent\\/1472 > div:nth-child(4) > div > div > label > div > div > input")
+    @FindBy(css = "div > input")
     private WebElement emailField;
+
+    @FindBy(css = "li:nth-child(5) > ul > li > a[href] ")
+    private List<WebElement> resourcesLinks;
 
     public Boolean downloadButtonDisplay() {
         System.out.println("Проверка наличия кнопки Download");
@@ -27,8 +30,17 @@ public class ReSharperPage {
         return emailField.getAttribute("placeholder");
     }
 
+    public Boolean checkBlogLinkInResources(String linkOnBlog) {
+        System.out.println("Проверка наличия ссылки на Blog в подвале страницы");
+        for (int i = 0; i < resourcesLinks.size() - 1; i++) {
+            if (resourcesLinks.get(i).getAttribute("href").equals(linkOnBlog)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public ReSharperPage(WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 }

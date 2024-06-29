@@ -19,7 +19,7 @@ public class ReSharperTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("отображение кнопки Download")
+    @DisplayName("Отображение кнопки Download")
     public void clickOnDownloadButton() {
         assertTrue(reSharperPage.downloadButtonDisplay(), "Кнопка Download не отображается.");
     }
@@ -28,5 +28,11 @@ public class ReSharperTest extends BaseTest {
     @DisplayName("Проверка Placeholder в поле Email")
     public void checkEmailFieldPlaceholder() {
         assertEquals(reSharperPage.checkEmailFieldPlaceholder(), "Email", "Placeholder не соответствует полю.");
+    }
+
+    @Test
+    @DisplayName("Проверка наличия ссылки на блог в Footer страницы")
+    public void checkingForALinkOnABlog() {
+        assertTrue(reSharperPage.checkBlogLinkInResources("https://blog.jetbrains.com/"), "Ссылка на Blog отсутствует.");
     }
 }
