@@ -11,13 +11,13 @@ import java.util.List;
 
 public class ReSharperPage {
 
-    @FindBy(css = "a[href=\"/resharper/download/\"]")
+    @FindBy(css = "a[href='/resharper/download/']")
     private WebElement downloadLink;
 
-    @FindBy(css = "div > input")
+    @FindBy(css = "input[name = \"email\"]")
     private WebElement emailField;
 
-    @FindBy(css = "li:nth-child(5) > ul > li > a[href] ")
+    @FindBy(css = "li:nth-child(5) > ul > li > a[href]")
     private List<WebElement> resourcesLinks;
 
     public Boolean downloadButtonDisplay() {
