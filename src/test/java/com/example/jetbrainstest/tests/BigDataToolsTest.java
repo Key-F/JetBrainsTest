@@ -1,21 +1,21 @@
 package com.example.jetbrainstest.tests;
 
-import com.example.jetbrainstest.pages.bigDataToolsPage;
+import com.example.jetbrainstest.pages.BigDataToolsPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class bigDataToolsTest extends BaseTest {
-    private bigDataToolsPage bigDataToolsPage;
+public class BigDataToolsTest extends BaseTest {
+    private BigDataToolsPage bigDataToolsPage;
 
     @BeforeEach
     @Override
     public void setUp() {
         super.setUp();
         getDriver().get("https://plugins.jetbrains.com/plugin/12494-big-data-tools");
-        bigDataToolsPage = new bigDataToolsPage(getDriver());
+        bigDataToolsPage = new BigDataToolsPage(getDriver());
     }
 
     @Test

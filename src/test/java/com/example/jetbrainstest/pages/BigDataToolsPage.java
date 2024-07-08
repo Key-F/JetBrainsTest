@@ -9,8 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class bigDataToolsPage {
-    private final Logger LOG = LoggerFactory.getLogger(bigDataToolsPage.class);
+public class BigDataToolsPage {
+    private final Logger LOG = LoggerFactory.getLogger(BigDataToolsPage.class);
     WebDriver driver;
     private WebDriverWait wait;
 
@@ -23,7 +23,7 @@ public class bigDataToolsPage {
         return getButton.isEnabled();
     }
 
-    public bigDataToolsPage(WebDriver driver) {
+    public BigDataToolsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
