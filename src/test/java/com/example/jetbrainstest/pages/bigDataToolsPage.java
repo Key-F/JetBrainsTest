@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,7 @@ public class bigDataToolsPage {
     @FindBy(xpath = "//*[contains(text(),'Get')]")
     private WebElement getButton;
 
+    @Step("Проверка активности кнопки скачивания")
     public Boolean checkIfGetButtonIsClickable() {
         LOG.info("Проверка активности кнопки скачивания");
         return getButton.isEnabled();
