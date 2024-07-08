@@ -16,9 +16,22 @@ public class BigDataToolsPage {
     @FindBy(xpath = "//*[contains(text(),'Get')]")
     private WebElement getButton;
 
+    @FindBy(xpath = "//*[contains(text(),'242.19890.14']")
+    private WebElement getVersion;
+
     public Boolean checkIfGetButtonIsClickable() {
-        LOG.infoWithScreenshot("Проверка активности кнопки скачивания");
+        LOG.info("Проверка активности кнопки скачивания");
         return getButton.isEnabled();
+    }
+
+    public void clickOnGetButton() {
+        LOG.info("Нажимаем на кнопку скачивания");
+        getButton.click();
+    }
+
+    public void clickOnVersionButton() {
+        LOG.info("Нажимаем на скачивание версии 242.19890.14");
+        getVersion.click();
     }
 
     public BigDataToolsPage(WebDriver driver) {
