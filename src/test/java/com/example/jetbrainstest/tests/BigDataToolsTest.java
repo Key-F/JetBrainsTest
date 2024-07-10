@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.MyExtension;
+import com.example.jetbrainstest.MyOwnExtension;
 import com.example.jetbrainstest.pages.BigDataToolsPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@ExtendWith(MyExtension.class)
+@ExtendWith(MyOwnExtension.class)
 
 public class BigDataToolsTest extends BaseTest {
     private BigDataToolsPage BigDataToolsPage;
