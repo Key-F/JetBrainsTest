@@ -2,7 +2,6 @@ package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.AllureAttachmentsManager;
 import com.example.jetbrainstest.MyExtension;
-
 import com.example.jetbrainstest.pages.scalapages.ScalaJetBrainsMarketplacePage;
 import com.example.jetbrainstest.pages.scalapages.ScalaOverviewPage;
 import com.example.jetbrainstest.pages.scalapages.ScalaPage;
@@ -14,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MyExtension.class)
@@ -23,12 +21,13 @@ public class ScalaTest extends BaseTest {
     private ScalaReportIssuePages scalaReportIssuePages;
     private ScalaJetBrainsMarketplacePage scalaJetBrainsMarketplacePage;
     private ScalaOverviewPage scalaOverviewPage;
+    public static final String PLUGINS_URL = "https://plugins.jetbrains.com";
 
     @BeforeEach
     @Override
     public void setUp() {
         super.setUp();
-        getDriver().get("https://plugins.jetbrains.com/plugin/1347-scala");
+        getDriver().get(PLUGINS_URL + "/plugin/1347-scala");
         scalaPage = new ScalaPage(getDriver());
         scalaReportIssuePages = new ScalaReportIssuePages(getDriver());
         scalaJetBrainsMarketplacePage = new ScalaJetBrainsMarketplacePage(getDriver());
@@ -72,7 +71,7 @@ public class ScalaTest extends BaseTest {
     @DisplayName("Проверка перехода на страницу JetBrains Marketplace при нажатие кнопки Learn more")
     public void openingJetBrainsMarketplace() {
         scalaJetBrainsMarketplacePage.checkMarketplace();
-        assertTrue(scalaReportIssuePages.getTabUrl().contains("https://plugins.jetbrains.com/docs/marketplace/reviews-policy.html"), "Не верная ссылка");
+        assertTrue(scalaReportIssuePages.getTabUrl().contains(PLUGINS_URL + "/docs/marketplace/reviews-policy.html"), "Не верная ссылка");
     }
 
     @Test
@@ -114,8 +113,8 @@ public class ScalaTest extends BaseTest {
     @Test
     @DisplayName("Проверка открытие страницы Scala bundle после нажатия кнопки Scala bundle")
     public void openScalaBundle() {
-        Assertions.assertEquals(scalaOverviewPage.checkScalaBundleclickable(),
-                "https://plugins.jetbrains.com/bundles/2-scala-bundle",
+        Assertions.assertEquals(scalaOverviewPage.getUrlOfPageIfScalaBundleIsClickable(),
+                PLUGINS_URL + "/bundles/2-scala-bundle",
                 "Не верная ссылка");
     }
 
@@ -135,7 +134,7 @@ public class ScalaTest extends BaseTest {
     @DisplayName("Переход на страницу Reviews, после нажатия кнопки Show All Reviews")
     public void openReviewsShowAllReviewsClickable() {
         Assertions.assertEquals(scalaOverviewPage.clickShowAllReviews(),
-                "https://plugins.jetbrains.com/plugin/1347-scala/reviews",
+                PLUGINS_URL + "/plugin/1347-scala/reviews",
                 "Не верная ссылка");
     }
 

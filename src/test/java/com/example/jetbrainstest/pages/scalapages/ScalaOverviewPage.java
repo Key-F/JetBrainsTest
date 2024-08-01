@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ScalaOverviewPage {
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(ScalaPage.class));
@@ -54,7 +52,7 @@ public class ScalaOverviewPage {
         return scalaBundle.isEnabled();
     }
 
-    public String checkScalaBundleclickable() {
+    public String getUrlOfPageIfScalaBundleIsClickable() {
         LOG.infoWithScreenshot("Проверка открытия страницы Scala bundle, после нажатия кнопки Scala Bundle");
         overview.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(scalaBundle));
