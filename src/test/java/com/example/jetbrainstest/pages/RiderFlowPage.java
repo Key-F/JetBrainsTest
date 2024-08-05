@@ -1,8 +1,6 @@
 package com.example.jetbrainstest.pages;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
@@ -51,23 +51,22 @@ public class RiderFlowPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.elementToBeClickable(riderFlowPage));
         riderFlowPage.click();
-        System.out.println("Action of ElementDeveloperTools: " + message);
+        LOG.info("Action of ElementDeveloperTools");
     }
 
     public void clickCookieAcceptButton() {
         cookieAcceptButton.click();
-      LOG.info("Action of AcceptButton: ");
-        System.out.println("Action of AcceptButton: " + message);
+        LOG.info("Action of AcceptButton");
     }
 
     public void clickElementRiderFlow() {
         developerToolsElement.click();
-        System.out.println("Action of ElementRiderFlow: " + message);
+        LOG.info("Action of ElementRiderFlow");
     }
 
     public void clickWatchButton() {
         watchButton.click();
-        System.out.println("DownloadButton: " + message);
+        LOG.info("DownloadButton");
     }
 
     public RiderFlowPage(WebDriver driver) {
