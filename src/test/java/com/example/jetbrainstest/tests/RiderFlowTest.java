@@ -49,7 +49,7 @@ public class RiderFlowTest {
         rfp.clickCookieAcceptButton();
         rfp.clickElementDeveloperTools();
         rfp.clickElementRiderFlow();
-
+//
         assertEquals("RiderFlow for Unity  ", rfp.contentRiderFlow(), "Неправильный текст оглавления");
     }
 }
