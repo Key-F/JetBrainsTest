@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.pages;
 
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,6 +38,8 @@ public class RiderFlowPage {
     @FindBy(xpath = "//h1[contains(text(),'RiderFlow for Unity')]")
     private WebElement contentRiderFlow;
 
+
+
     public String contentRiderFlow() {
         ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
@@ -46,7 +49,7 @@ public class RiderFlowPage {
         return contentRiderFlow.getText();
 
     }
-
+    @Step("Action of ElementDeveloperTools")
     public void clickElementDeveloperTools() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.elementToBeClickable(riderFlowPage));
@@ -54,16 +57,19 @@ public class RiderFlowPage {
         LOG.info("Action of ElementDeveloperTools");
     }
 
+    @Step("Action of AcceptButton")
     public void clickCookieAcceptButton() {
         cookieAcceptButton.click();
         LOG.info("Action of AcceptButton");
     }
 
+    @Step("Action of ElementRiderFlow")
     public void clickElementRiderFlow() {
         developerToolsElement.click();
         LOG.info("Action of ElementRiderFlow");
     }
 
+    @Step("DownloadButton")
     public void clickWatchButton() {
         watchButton.click();
         LOG.info("DownloadButton");
