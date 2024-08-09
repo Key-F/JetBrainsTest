@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.pages;
 
 
+import com.example.jetbrainstest.AllureLogger;
 import io.qameta.allure.Step;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,7 @@ import java.time.Duration;
 
 public class RiderFlowPage {
 
-    private final Logger LOG = LoggerFactory.getLogger(RiderFlowPage.class);
+    private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(RiderFlowPage.class));
 
     WebDriver driver;
     String message = "clicked";
@@ -49,7 +50,7 @@ public class RiderFlowPage {
         return contentRiderFlow.getText();
 
     }
-    @Step("Action of ElementDeveloperTools")
+
     public void clickElementDeveloperTools() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.elementToBeClickable(riderFlowPage));
@@ -57,19 +58,19 @@ public class RiderFlowPage {
         LOG.info("Action of ElementDeveloperTools");
     }
 
-    @Step("Action of AcceptButton")
+
     public void clickCookieAcceptButton() {
         cookieAcceptButton.click();
         LOG.info("Action of AcceptButton");
     }
 
-    @Step("Action of ElementRiderFlow")
+
     public void clickElementRiderFlow() {
         developerToolsElement.click();
         LOG.info("Action of ElementRiderFlow");
     }
 
-    @Step("DownloadButton")
+
     public void clickWatchButton() {
         watchButton.click();
         LOG.info("DownloadButton");
