@@ -61,7 +61,7 @@ public class RiderFlowPage {
 
     public void clickCookieAcceptButton() {
         cookieAcceptButton.click();
-        LOG.info("Action of AcceptButton");
+        LOG.infoWithScreenshot("Action of AcceptButton");
     }
 
 
