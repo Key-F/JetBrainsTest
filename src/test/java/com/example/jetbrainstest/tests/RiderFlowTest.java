@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RiderFlowTest {
 
@@ -37,7 +38,7 @@ public class RiderFlowTest {
         rfp.clickCookieAcceptButton();
         rfp.clickElementDeveloperTools();
         rfp.clickElementRiderFlow();
-        rfp.clickWatchButton();
+        rfp.clickDownloadButton();
 
         String currentUrl = driver.getCurrentUrl();
         assertEquals("https://www.jetbrains.com/riderflow/download/#section=unity-asset-store", currentUrl, "Адрес != Watch");
@@ -52,4 +53,14 @@ public class RiderFlowTest {
 
         assertEquals("RiderFlow for Unity  ", rfp.contentRiderFlow(), "Неправильный текст оглавления");
     }
+
+//    @Test
+//    @DisplayName("Проверка активности кнопки Download")
+//    public void downloadButton() {
+//        rfp.clickCookieAcceptButton();
+//        rfp.clickElementDeveloperTools();
+//        rfp.clickElementRiderFlow();
+//
+//        assertTrue(rfp.checkDownloadButton(),"Кнопка не активна");
+//    }
 }

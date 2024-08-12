@@ -2,7 +2,6 @@ package com.example.jetbrainstest.pages;
 
 
 import com.example.jetbrainstest.AllureLogger;
-import io.qameta.allure.Step;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
@@ -34,7 +32,7 @@ public class RiderFlowPage {
     private WebElement cookieAcceptButton;
 
     @FindBy(css = "a[href='/riderflow/download']:first-child")
-    private WebElement watchButton;
+    private WebElement downloadButton;
 
     @FindBy(xpath = "//h1[contains(text(),'RiderFlow for Unity')]")
     private WebElement contentRiderFlow;
@@ -71,9 +69,14 @@ public class RiderFlowPage {
     }
 
 
-    public void clickWatchButton() {
-        watchButton.click();
+    public void clickDownloadButton() {
+        downloadButton.click();
         LOG.info("DownloadButton");
+    }
+
+    public Boolean checkDownloadButton() {
+        System.out.println("Проверка кнопки Download");
+        return downloadButton.isEnabled();
     }
 
     public RiderFlowPage(WebDriver driver) {

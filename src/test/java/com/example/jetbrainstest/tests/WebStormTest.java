@@ -1,12 +1,13 @@
 package com.example.jetbrainstest.tests;
 
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.WebStormPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class WebStormTest extends BaseTest{
+public class WebStormTest extends BaseTest {
     private WebStormPage WebStormPage;
 
     @BeforeEach

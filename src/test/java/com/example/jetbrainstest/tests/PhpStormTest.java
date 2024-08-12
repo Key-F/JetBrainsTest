@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.tests;
 
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.PhpStormPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -7,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PhpStormTest extends BaseTest{
+public class PhpStormTest extends BaseTest {
     private PhpStormPage PhpStormPage;
 
     @BeforeEach

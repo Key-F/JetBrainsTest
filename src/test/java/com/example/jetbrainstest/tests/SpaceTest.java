@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.MyExtension;
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.spacepages.SpacePage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @ExtendWith(MyExtension.class)
-public class SpaceTest  extends BaseTest{
+public class SpaceTest  extends BaseTest {
     private SpacePage spacePage;
 
     @BeforeEach

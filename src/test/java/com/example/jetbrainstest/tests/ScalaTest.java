@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.ScalaPage;
 
 import org.junit.jupiter.api.BeforeEach;

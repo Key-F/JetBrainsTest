@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.MyExtension;
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.toolboxpages.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +16,7 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(MyExtension.class)
-public class ToolBoxAppTest extends BaseTest{
+public class ToolBoxAppTest extends BaseTest {
     private ToolBoxAppPage toolBoxAppPage;
     private ToolBoxFAQShortcutsPage toolBoxFAQShortcutsPage;
     private ToolBoxBlogAndSocialPage toolBoxBlogAndSocialPage;
