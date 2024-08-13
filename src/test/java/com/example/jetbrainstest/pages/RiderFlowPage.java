@@ -52,25 +52,25 @@ public class RiderFlowPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.elementToBeClickable(riderFlowPage));
         riderFlowPage.click();
-        LOG.infoWithScreenshot("Нажатие на элемент DeveloperTools");
+        LOG.info("Нажатие на элемент DeveloperTools");
     }
 
 
     public void clickCookieAcceptButton() {
         cookieAcceptButton.click();
-        LOG.infoWithScreenshot("Нажатие на кнопку Accept");
+        LOG.info("Нажатие на кнопку Accept");
     }
 
 
     public void clickElementRiderFlow() {
         developerToolsElement.click();
-        LOG.infoWithScreenshot("Нажатие на элемент RiderFlow");
+        LOG.info("Нажатие на элемент RiderFlow");
     }
 
 
     public void clickDownloadButton() {
         downloadButton.click();
-        LOG.infoWithScreenshot("Нажатие на кнопку Download");
+        LOG.info("Нажатие на кнопку Download");
     }
 
     public Boolean checkDownloadButton() {
