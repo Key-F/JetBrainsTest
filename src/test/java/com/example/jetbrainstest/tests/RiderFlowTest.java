@@ -1,47 +1,35 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.pages.RiderFlowPage;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class RiderFlowTest {
+public class RiderFlowTest extends BaseTest {
 
-    private WebDriver driver;
     RiderFlowPage rfp;
 
     @BeforeEach
+    @Override
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.jetbrains.com/");
-        rfp = new RiderFlowPage(driver);
-    }
-
-    @AfterEach
-    public void tearDown() {
-        driver.quit();
+        super.setUp();
+        getDriver().get("https://www.jetbrains.com/");
+        rfp = new RiderFlowPage(getDriver());
     }
 
     @Test
-    @DisplayName("Проверка кнопки Watch")
+    @DisplayName("Проверка кнопки Download")
     public void DeveloperTools() {
         rfp.clickCookieAcceptButton();
         rfp.clickElementDeveloperTools();
         rfp.clickElementRiderFlow();
         rfp.clickDownloadButton();
 
-        String currentUrl = driver.getCurrentUrl();
-        assertEquals("https://www.jetbrains.com/riderflow/download/#section=unity-asset-store", currentUrl, "Адрес != Watch");
+        String currentUrl = getDriver().getCurrentUrl();
+        assertEquals("https://www.jetbrains.com/riderflow/download/#section=unity-asset-store", currentUrl, "Адрес != Download");
     }
 
     @Test
@@ -54,13 +42,13 @@ public class RiderFlowTest {
         assertEquals("RiderFlow for Unity  ", rfp.contentRiderFlow(), "Неправильный текст оглавления");
     }
 
-//    @Test
-//    @DisplayName("Проверка активности кнопки Download")
-//    public void downloadButton() {
-//        rfp.clickCookieAcceptButton();
-//        rfp.clickElementDeveloperTools();
-//        rfp.clickElementRiderFlow();
-//
-//        assertTrue(rfp.checkDownloadButton(),"Кнопка не активна");
-//    }
+    @Test
+    @DisplayName("Проверка активности кнопки Download")
+    public void downloadButton() {
+        rfp.clickCookieAcceptButton();
+        rfp.clickElementDeveloperTools();
+        rfp.clickElementRiderFlow();
+
+        assertTrue(rfp.checkDownloadButton(), "Кнопка не активна");
+    }
 }

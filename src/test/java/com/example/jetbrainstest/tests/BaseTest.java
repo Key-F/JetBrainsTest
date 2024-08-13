@@ -1,5 +1,6 @@
-package com.example.jetbrainstest;
+package com.example.jetbrainstest.tests;
 
+import com.example.jetbrainstest.AllureLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

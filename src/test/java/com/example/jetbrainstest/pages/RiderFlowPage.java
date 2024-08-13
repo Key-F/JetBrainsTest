@@ -38,7 +38,6 @@ public class RiderFlowPage {
     private WebElement contentRiderFlow;
 
 
-
     public String contentRiderFlow() {
         ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
@@ -53,29 +52,29 @@ public class RiderFlowPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.elementToBeClickable(riderFlowPage));
         riderFlowPage.click();
-        LOG.info("Action of ElementDeveloperTools");
+        LOG.infoWithScreenshot("Нажатие на элемент DeveloperTools");
     }
 
 
     public void clickCookieAcceptButton() {
         cookieAcceptButton.click();
-        LOG.infoWithScreenshot("Action of AcceptButton");
+        LOG.infoWithScreenshot("Нажатие на кнопку Accept");
     }
 
 
     public void clickElementRiderFlow() {
         developerToolsElement.click();
-        LOG.info("Action of ElementRiderFlow");
+        LOG.infoWithScreenshot("Нажатие на элемент RiderFlow");
     }
 
 
     public void clickDownloadButton() {
         downloadButton.click();
-        LOG.info("DownloadButton");
+        LOG.infoWithScreenshot("Нажатие на кнопку Download");
     }
 
     public Boolean checkDownloadButton() {
-        System.out.println("Проверка кнопки Download");
+        LOG.infoWithScreenshot("Проверка кнопки Download");
         return downloadButton.isEnabled();
     }
 
