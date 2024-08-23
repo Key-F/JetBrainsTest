@@ -4,8 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DotCoverPage {
+
+    private final Logger LOG = LoggerFactory.getLogger(DotCoverPage.class);
 
     WebDriver driver;
 
@@ -13,7 +17,7 @@ public class DotCoverPage {
     private WebElement downloadButton;
 
     public Boolean checkActivityOfDownload() {
-        System.out.println("Проверка работоспособности кнопки загрузки");
+        LOG.info("Проверка работоспособности кнопки загрузки");
         return downloadButton.isEnabled();
     }
 
@@ -21,7 +25,7 @@ public class DotCoverPage {
     private WebElement pricingButton;
 
     public Boolean checkActivityOfPricing() {
-        System.out.println("Проверка работоспособности кнопки цен");
+        LOG.info("Проверка работоспособности кнопки цен");
         return pricingButton.isEnabled();
     }
 
@@ -29,7 +33,7 @@ public class DotCoverPage {
     private WebElement dotCoverEl;
 
     public Boolean checkDotCoverEl() {
-        System.out.println("Проверка наличия текста");
+        LOG.info("Проверка наличия текста");
         return dotCoverEl.isDisplayed();
     }
 
@@ -37,7 +41,7 @@ public class DotCoverPage {
     private WebElement allFeaturesEl;
 
     public Boolean checkActivityOfAllFeatures() {
-        System.out.println("Проверка работоспособности кнопки изучения всех особенностей");
+        LOG.info("Проверка работоспособности кнопки изучения всех особенностей");
         return allFeaturesEl.isEnabled();
     }
 
