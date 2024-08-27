@@ -1,7 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.MyExtension;
-import com.example.jetbrainstest.pages.clionpages.CLionDownloadPage;
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.qodanapages.QodanaDocumentationPage;
 import com.example.jetbrainstest.pages.qodanapages.QodanaPage;
 import com.example.jetbrainstest.pages.qodanapages.QodanaPricingPage;
@@ -10,15 +10,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(MyExtension.class)
-public class QodanaTest extends BaseTest{
+public class QodanaTest extends BaseTest {
     private QodanaPage QoPage;
     private QodanaPricingPage QoPricingPage;
 

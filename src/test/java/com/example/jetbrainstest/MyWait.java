@@ -1,6 +1,5 @@
 package com.example.jetbrainstest;
 
-import com.example.jetbrainstest.tests.BaseTest;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.MyExtension;
+import com.example.jetbrainstest.BaseTest;
 import com.example.jetbrainstest.pages.clionpages.CLionDownloadPage;
 import com.example.jetbrainstest.pages.clionpages.CLionPage;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,6 +1,5 @@
 package com.example.jetbrainstest;
 
-import com.example.jetbrainstest.tests.BaseTest;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
