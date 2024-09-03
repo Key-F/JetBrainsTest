@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,7 @@ public class DotCoverPage {
     @FindBy(css = "a[data-test='button'][href='/dotcover/download/']")
     private WebElement downloadButton;
 
+    @Step("Проверка работоспособности кнопки загрузки")
     public Boolean checkActivityOfDownload() {
         LOG.info("Проверка работоспособности кнопки загрузки");
         return downloadButton.isEnabled();
@@ -24,6 +26,7 @@ public class DotCoverPage {
     @FindBy(css = "a[data-test='button'][href='/dotcover/buy/']")
     private WebElement pricingButton;
 
+    @Step("Проверка работоспособности кнопки цен")
     public Boolean checkActivityOfPricing() {
         LOG.info("Проверка работоспособности кнопки цен");
         return pricingButton.isEnabled();
@@ -32,6 +35,7 @@ public class DotCoverPage {
     @FindBy(xpath = "//h1[@class='wt-col-inline rs-hero rs-hero_theme_dark']")
     private WebElement dotCoverEl;
 
+    @Step("Проверка наличия текста")
     public Boolean checkDotCoverEl() {
         LOG.info("Проверка наличия текста");
         return dotCoverEl.isDisplayed();
@@ -40,6 +44,7 @@ public class DotCoverPage {
     @FindBy(css = "a[data-test='button'][href='/dotcover/features']")
     private WebElement allFeaturesEl;
 
+    @Step("Проверка работоспособности кнопки изучения всех особенностей")
     public Boolean checkActivityOfAllFeatures() {
         LOG.info("Проверка работоспособности кнопки изучения всех особенностей");
         return allFeaturesEl.isEnabled();
