@@ -9,12 +9,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class JetBrainsAIPage {
+public class JetBrainsAiPage {
 
-    private final Logger LOG = LoggerFactory.getLogger(JetBrainsAIPage.class);
+    private final Logger LOG = LoggerFactory.getLogger(JetBrainsAiPage.class);
     private WebDriver driver;
 
-    public JetBrainsAIPage(WebDriver driver){
+    public JetBrainsAiPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
