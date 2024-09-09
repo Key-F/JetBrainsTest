@@ -17,7 +17,7 @@ public class DotCoverPage {
     private WebElement downloadButton;
 
     public Boolean checkActivityOfDownload() {
-        LOG.info("Проверка работоспособности кнопки загрузки");
+        LOG.infoWithScreenshot("Проверка работоспособности кнопки загрузки");
         return downloadButton.isEnabled();
     }
 
@@ -25,7 +25,7 @@ public class DotCoverPage {
     private WebElement pricingButton;
 
     public Boolean checkActivityOfPricing() {
-        LOG.info("Проверка работоспособности кнопки цен");
+        LOG.infoWithScreenshot("Проверка работоспособности кнопки цен");
         return pricingButton.isEnabled();
     }
 
@@ -33,7 +33,7 @@ public class DotCoverPage {
     private WebElement dotCoverEl;
 
     public Boolean checkDotCoverEl() {
-        LOG.info("Проверка наличия текста");
+        LOG.infoWithScreenshot("Проверка наличия текста");
         return dotCoverEl.isDisplayed();
     }
 
@@ -41,7 +41,7 @@ public class DotCoverPage {
     private WebElement allFeaturesEl;
 
     public Boolean checkActivityOfAllFeatures() {
-        LOG.info("Проверка работоспособности кнопки изучения всех особенностей");
+        LOG.infoWithScreenshot("Проверка работоспособности кнопки изучения всех особенностей");
         return allFeaturesEl.isEnabled();
     }
 

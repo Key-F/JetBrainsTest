@@ -15,4 +15,11 @@ public class AllureLogger {
         public void info(String logText){
             logger.info(logText);
         }
+
+        @Step("{logText}")
+        public void infoWithScreenshot(String longText){
+            logger.info(longText);
+            AllureAttachmentsManager.screenshot();
+        }
 }
+
