@@ -22,4 +22,3 @@ public class AllureLogger {
             AllureAttachmentsManager.screenshot();
         }
 }
-
