@@ -65,4 +65,6 @@ public class JetBrainsAiPage {
         developerEcosystemButton.click();
     }
 
+    wtf
+
 }

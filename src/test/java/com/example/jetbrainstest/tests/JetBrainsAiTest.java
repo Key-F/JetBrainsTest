@@ -65,7 +65,4 @@ public class JetBrainsAiTest extends BaseTest {
         DeveloperEcosystemPage.dropdownButtonClick();
         assertTrue(DeveloperEcosystemPage.aiDropdownButtonEnable(), "Кнопка недоступна");
     }
-
-    wtf bro
-
 }
