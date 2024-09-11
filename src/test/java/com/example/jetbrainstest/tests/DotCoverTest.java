@@ -52,64 +52,104 @@ public class DotCoverTest extends BaseTest {
     @DisplayName("Проверка нажатия кнопки 'Docs & Demos'")
     public void docsDemosButtonClickCheck() {
         DotCoverPage.docsDemosButtonClick();
-        assertEquals("https://www.jetbrains.com/dotcover/documentation/",getDriver().getCurrentUrl(),"Неверная ссылка");
+        assertEquals("https://www.jetbrains.com/dotcover/documentation/", getDriver().getCurrentUrl(), "Неверная ссылка");
     }
 
     @Test
     @DisplayName("Проверка нажатия кнопки 'Blog & Social'")
     public void blogSocialButtonClickCheck() {
         DotCoverPage.blogSocialButtonClick();
-        assertEquals("https://www.jetbrains.com/dotcover/social/", getDriver().getCurrentUrl(),"Неверная ссылка");
+        assertEquals("https://www.jetbrains.com/dotcover/social/", getDriver().getCurrentUrl(), "Неверная ссылка");
     }
 
     @Test
     @DisplayName("Проверка нажатия кнопки 'Features'")
     public void featuresButtonCheck() {
         DotCoverPage.featureButtonClick();
-        assertEquals("https://www.jetbrains.com/dotcover/features/", getDriver().getCurrentUrl(),"Неверная ссылка");
+        assertEquals("https://www.jetbrains.com/dotcover/features/", getDriver().getCurrentUrl(), "Неверная ссылка");
     }
 
     @Test
     @DisplayName("Проверка нажатия кнопки 'What's New'")
-    public void whatsNewButtonCheck(){
+    public void whatsNewButtonCheck() {
         DotCoverPage.whatsNewButtonClick();
-        assertEquals("https://www.jetbrains.com/dotcover/whatsnew/",getDriver().getCurrentUrl(),"Неверная ссылка");
+        assertEquals("https://www.jetbrains.com/dotcover/whatsnew/", getDriver().getCurrentUrl(), "Неверная ссылка");
     }
 
     @Test
     @DisplayName("Проверка, что кнопка 'Language Picker активна'")
-    public void checkLangPick(){
-        assertTrue(DotCoverPage.checkLanguagePicker(),"Кнопка 'Language Picker' неактивна");
+    public void checkLangPick() {
+        assertTrue(DotCoverPage.checkLanguagePicker(), "Кнопка 'Language Picker' неактивна");
     }
 
     @Test
     @DisplayName("Проверка, что кнопка 'Cart action' активна")
-    public void checkCartAct(){
-        assertTrue(DotCoverPage.checkCartAction(),"Кнопка 'Cart action' неактивна");
+    public void checkCartAct() {
+        assertTrue(DotCoverPage.checkCartAction(), "Кнопка 'Cart action' неактивна");
     }
 
     @Test
     @DisplayName("Проверка нажатия кнопки 'Profile Action'")
-    public void profileActionCheck(){
+    public void profileActionCheck() {
         DotCoverPage.profileActionClick();
-        assertEquals("https://account.jetbrains.com/login",getDriver().getCurrentUrl(),"Неверная ссылка");
+        assertEquals("https://account.jetbrains.com/login", getDriver().getCurrentUrl(), "Неверная ссылка");
     }
 
     @Test
     @DisplayName("Проверка, что кнопка 'Search action' активна")
-    public void checkSearchAct(){
-        assertTrue(DotCoverPage.checkSearchAction(),"Кнопка 'Search action' неактивна");
+    public void checkSearchAct() {
+        assertTrue(DotCoverPage.checkSearchAction(), "Кнопка 'Search action' неактивна");
     }
 
     @Test
     @DisplayName("Проверка, что кнопка 'Store' отображается")
-    public void storeButtonCheck(){
-        assertTrue(DotCoverPage.storeButtonAction(),"Кнопка 'Store' не отображается");
+    public void storeButtonCheck() {
+        assertTrue(DotCoverPage.storeButtonAction(), "Кнопка 'Store' не отображается");
     }
 
     @Test
     @DisplayName("Проверка, что кнопка 'Support' отображается")
-    public void supportButtonCheck(){
-        assertTrue(DotCoverPage.supportButtonAction(),"Кнопка 'Support' не отображается");
+    public void supportButtonCheck() {
+        assertTrue(DotCoverPage.supportButtonAction(), "Кнопка 'Support' не отображается");
+    }
+
+    @Test
+    @DisplayName("Проверка, что кнопка 'Solutions' отображается")
+    public void solutionsButtonCheck() {
+        assertTrue(DotCoverPage.solutionsButtonAction(), "Кнопка 'Solution' не отображается");
+    }
+
+    @Test
+    @DisplayName("Проверка, что кнопка 'Education' отображается")
+    public void educationButtonCheck() {
+        assertTrue(DotCoverPage.educationButtonAction(), "Кнопка 'Education' не отображается");
+    }
+
+    @Test
+    @DisplayName("Проверка, что кнопка 'Team Tools' отображается")
+    public void teamToolsButtonCheck() {
+        assertTrue(DotCoverPage.teamToolsButtonAction(), "Кнопка 'Team Tools' не отображается");
+    }
+
+    @Test
+    @DisplayName("Проверка, что кнопка 'Developer Tools' отображается")
+    public void devToolsButtonCheck() {
+        assertTrue(DotCoverPage.devToolsButtonAction(), "Кнопка 'Developer Tools' не отображается");
+    }
+
+    @Test
+    @DisplayName("Проверка нажатия кнопки 'Community forum'")
+    public void comForumButtonCheck() {
+        DotCoverPage.comForumActionClick();
+        assertEquals("https://dotnettools-support.jetbrains.com/hc/en-us/community/topics/200379915-dotCover",
+                getDriver().getCurrentUrl(),
+                "Неверная ссылка");
+    }
+
+    @Test
+    @DisplayName("Проверка нажатия кнопки 'Bug and issue tracker'")
+    public void bugTrackerButtonCheck() {
+        DotCoverPage.bugTrackerActionClick();
+        assertEquals("https://youtrack.jetbrains.com/issues/DCVR", getDriver().getCurrentUrl(), "Неверная ссылка");
     }
 }

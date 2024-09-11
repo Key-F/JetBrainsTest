@@ -61,7 +61,7 @@ public class DotCoverPage {
         blogSocialButton.click();
     }
 
-    @FindBy(css= "a[href='/dotcover/features/']")
+    @FindBy(css = "a[href='/dotcover/features/']")
     private WebElement featuresButton;
 
     public void featureButtonClick() {
@@ -80,7 +80,7 @@ public class DotCoverPage {
     @FindBy(css = "button[data-test='language-picker'][class$='1']")
     private WebElement languagePicker;
 
-    public Boolean checkLanguagePicker(){
+    public Boolean checkLanguagePicker() {
         LOG.infoWithScreenshot("Проверка работоспособности кнопки выбора языка");
         return languagePicker.isEnabled();
     }
@@ -88,7 +88,7 @@ public class DotCoverPage {
     @FindBy(css = "a[data-test='site-header-cart-action']")
     private WebElement cartAction;
 
-    public Boolean checkCartAction(){
+    public Boolean checkCartAction() {
         LOG.infoWithScreenshot("Проверка работоспособности кнопки корзины");
         return cartAction.isEnabled();
     }
@@ -96,7 +96,7 @@ public class DotCoverPage {
     @FindBy(css = "a[data-test='site-header-profile-action']")
     private WebElement profileAction;
 
-    public void profileActionClick(){
+    public void profileActionClick() {
         LOG.infoWithScreenshot("Проверка нажатия кнопки личного кабинета");
         profileAction.click();
     }
@@ -112,7 +112,7 @@ public class DotCoverPage {
     @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Store')]")
     private WebElement storeButton;
 
-    public Boolean storeButtonAction(){
+    public Boolean storeButtonAction() {
         LOG.infoWithScreenshot("Проверка отображения кнопки магазина");
         return storeButton.isDisplayed();
     }
@@ -120,9 +120,57 @@ public class DotCoverPage {
     @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Support')]")
     private WebElement supportButton;
 
-    public Boolean supportButtonAction(){
+    public Boolean supportButtonAction() {
         LOG.infoWithScreenshot("Проверка отображения кнопки поддержки");
         return supportButton.isDisplayed();
+    }
+
+    @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Solutions')]")
+    private WebElement solutionsButton;
+
+    public Boolean solutionsButtonAction() {
+        LOG.infoWithScreenshot("Проверка отображения кнопки решений");
+        return solutionsButton.isDisplayed();
+    }
+
+    @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Education')]")
+    private WebElement educationButton;
+
+    public Boolean educationButtonAction() {
+        LOG.infoWithScreenshot("Проверка отображения кнопки образования");
+        return educationButton.isDisplayed();
+    }
+
+    @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Team Tools')]")
+    private WebElement teamToolsButton;
+
+    public Boolean teamToolsButtonAction() {
+        LOG.infoWithScreenshot("Проверка отображения кнопки инструментов");
+        return teamToolsButton.isDisplayed();
+    }
+
+    @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Developer Tools')]")
+    private WebElement devToolsButton;
+
+    public Boolean devToolsButtonAction() {
+        LOG.infoWithScreenshot("Проверка отображения кнопки инструментов разработчика");
+        return devToolsButton.isDisplayed();
+    }
+
+    @FindBy(xpath = "(//div[@class='social-footer__link-text-wrapper'])[1]")
+    private WebElement comForumAction;
+
+    public void comForumActionClick() {
+        LOG.infoWithScreenshot("Проверка нажатия кнопки форума");
+        comForumAction.click();
+    }
+
+    @FindBy(xpath = "(//div[@class='social-footer__link-text-wrapper'])[2]")
+    private WebElement bugTrackerAction;
+
+    public void bugTrackerActionClick() {
+        LOG.infoWithScreenshot("Проверка нажатия кнопки отслеживания ошибок");
+        bugTrackerAction.click();
     }
 
     public DotCoverPage(WebDriver driver) {
