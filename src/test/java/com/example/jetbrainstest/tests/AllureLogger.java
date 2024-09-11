@@ -17,8 +17,8 @@ public class AllureLogger {
         }
 
         @Step("{logText}")
-        public void infoWithScreenshot(String longText){
-            logger.info(longText);
+        public void infoWithScreenshot(String logText){
+            logger.info(logText);
             AllureAttachmentsManager.screenshot();
         }
 }
