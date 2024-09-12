@@ -33,7 +33,7 @@ public class DotCoverPage {
     private WebElement dotCoverEl;
 
     public Boolean checkDotCoverEl() {
-        LOG.info("Проверка наличия текста");
+        LOG.info("Проверка наличия текста логотипа на главной странице");
         return dotCoverEl.isDisplayed();
     }
 
@@ -145,7 +145,7 @@ public class DotCoverPage {
     private WebElement teamToolsButton;
 
     public Boolean teamToolsButtonAction() {
-        LOG.info("Проверка отображения кнопки инструментов");
+        LOG.info("Проверка отображения кнопки командных инструментов");
         return teamToolsButton.isDisplayed();
     }
 
