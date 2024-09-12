@@ -133,7 +133,7 @@ public class DotCoverTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка, что кнопка 'Developer Tools' отображается")
-    public void devToolsButtonCheck() {
+    public void develToolsButtonCheck() {
         assertTrue(DotCoverPage.devToolsButtonAction(), "Кнопка 'Developer Tools' не отображается");
     }
 

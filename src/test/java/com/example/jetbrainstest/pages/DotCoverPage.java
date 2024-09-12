@@ -17,7 +17,7 @@ public class DotCoverPage {
     private WebElement downloadButton;
 
     public Boolean checkActivityOfDownload() {
-        LOG.infoWithScreenshot("Проверка работоспособности кнопки загрузки");
+        LOG.info("Проверка работоспособности кнопки загрузки");
         return downloadButton.isEnabled();
     }
 
@@ -25,7 +25,7 @@ public class DotCoverPage {
     private WebElement pricingButton;
 
     public Boolean checkActivityOfPricing() {
-        LOG.infoWithScreenshot("Проверка работоспособности кнопки цен");
+        LOG.info("Проверка работоспособности кнопки цен");
         return pricingButton.isEnabled();
     }
 
@@ -33,7 +33,7 @@ public class DotCoverPage {
     private WebElement dotCoverEl;
 
     public Boolean checkDotCoverEl() {
-        LOG.infoWithScreenshot("Проверка наличия текста");
+        LOG.info("Проверка наличия текста");
         return dotCoverEl.isDisplayed();
     }
 
@@ -41,7 +41,7 @@ public class DotCoverPage {
     private WebElement allFeaturesEl;
 
     public Boolean checkActivityOfAllFeatures() {
-        LOG.infoWithScreenshot("Проверка работоспособности кнопки изучения всех особенностей");
+        LOG.info("Проверка работоспособности кнопки изучения всех особенностей");
         return allFeaturesEl.isEnabled();
     }
 
@@ -49,7 +49,7 @@ public class DotCoverPage {
     private WebElement docsDemosButton;
 
     public void docsDemosButtonClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки документации и демо");
+        LOG.info("Проверка нажатия кнопки документации и демо");
         docsDemosButton.click();
     }
 
@@ -57,7 +57,7 @@ public class DotCoverPage {
     private WebElement blogSocialButton;
 
     public void blogSocialButtonClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки блога и социальных сетей");
+        LOG.info("Проверка нажатия кнопки блога и социальных сетей");
         blogSocialButton.click();
     }
 
@@ -65,7 +65,7 @@ public class DotCoverPage {
     private WebElement featuresButton;
 
     public void featureButtonClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки особенностей");
+        LOG.info("Проверка нажатия кнопки особенностей");
         featuresButton.click();
     }
 
@@ -73,7 +73,7 @@ public class DotCoverPage {
     private WebElement whatsNewButton;
 
     public void whatsNewButtonClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки новостей");
+        LOG.info("Проверка нажатия кнопки новостей");
         whatsNewButton.click();
     }
 
@@ -81,7 +81,7 @@ public class DotCoverPage {
     private WebElement languagePicker;
 
     public Boolean checkLanguagePicker() {
-        LOG.infoWithScreenshot("Проверка работоспособности кнопки выбора языка");
+        LOG.info("Проверка работоспособности кнопки выбора языка");
         return languagePicker.isEnabled();
     }
 
@@ -89,7 +89,7 @@ public class DotCoverPage {
     private WebElement cartAction;
 
     public Boolean checkCartAction() {
-        LOG.infoWithScreenshot("Проверка работоспособности кнопки корзины");
+        LOG.info("Проверка работоспособности кнопки корзины");
         return cartAction.isEnabled();
     }
 
@@ -97,7 +97,7 @@ public class DotCoverPage {
     private WebElement profileAction;
 
     public void profileActionClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки личного кабинета");
+        LOG.info("Проверка нажатия кнопки личного кабинета");
         profileAction.click();
     }
 
@@ -105,7 +105,7 @@ public class DotCoverPage {
     private WebElement searchAction;
 
     public Boolean checkSearchAction() {
-        LOG.infoWithScreenshot("Проверка работоспособности кнопки поиска");
+        LOG.info("Проверка работоспособности кнопки поиска");
         return searchAction.isEnabled();
     }
 
@@ -113,7 +113,7 @@ public class DotCoverPage {
     private WebElement storeButton;
 
     public Boolean storeButtonAction() {
-        LOG.infoWithScreenshot("Проверка отображения кнопки магазина");
+        LOG.info("Проверка отображения кнопки магазина");
         return storeButton.isDisplayed();
     }
 
@@ -121,7 +121,7 @@ public class DotCoverPage {
     private WebElement supportButton;
 
     public Boolean supportButtonAction() {
-        LOG.infoWithScreenshot("Проверка отображения кнопки поддержки");
+        LOG.info("Проверка отображения кнопки поддержки");
         return supportButton.isDisplayed();
     }
 
@@ -129,7 +129,7 @@ public class DotCoverPage {
     private WebElement solutionsButton;
 
     public Boolean solutionsButtonAction() {
-        LOG.infoWithScreenshot("Проверка отображения кнопки решений");
+        LOG.info("Проверка отображения кнопки решений");
         return solutionsButton.isDisplayed();
     }
 
@@ -137,7 +137,7 @@ public class DotCoverPage {
     private WebElement educationButton;
 
     public Boolean educationButtonAction() {
-        LOG.infoWithScreenshot("Проверка отображения кнопки образования");
+        LOG.info("Проверка отображения кнопки образования");
         return educationButton.isDisplayed();
     }
 
@@ -145,23 +145,23 @@ public class DotCoverPage {
     private WebElement teamToolsButton;
 
     public Boolean teamToolsButtonAction() {
-        LOG.infoWithScreenshot("Проверка отображения кнопки инструментов");
+        LOG.info("Проверка отображения кнопки инструментов");
         return teamToolsButton.isDisplayed();
     }
 
     @FindBy(xpath = "//div[contains(@class, '_mainMenuItem_wamm84_3')]//*[contains(text(), 'Developer Tools')]")
-    private WebElement devToolsButton;
+    private WebElement develToolsButton;
 
     public Boolean devToolsButtonAction() {
-        LOG.infoWithScreenshot("Проверка отображения кнопки инструментов разработчика");
-        return devToolsButton.isDisplayed();
+        LOG.info("Проверка отображения кнопки инструментов разработчика");
+        return develToolsButton.isDisplayed();
     }
 
     @FindBy(xpath = "(//div[@class='social-footer__link-text-wrapper'])[1]")
     private WebElement comForumAction;
 
     public void comForumActionClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки форума");
+        LOG.info("Проверка нажатия кнопки форума");
         comForumAction.click();
     }
 
@@ -169,7 +169,7 @@ public class DotCoverPage {
     private WebElement bugTrackerAction;
 
     public void bugTrackerActionClick() {
-        LOG.infoWithScreenshot("Проверка нажатия кнопки отслеживания ошибок");
+        LOG.info("Проверка нажатия кнопки отслеживания ошибок");
         bugTrackerAction.click();
     }
 
