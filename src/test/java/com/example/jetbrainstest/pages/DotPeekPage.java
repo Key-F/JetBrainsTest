@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 public class DotPeekPage {
 
-//    private final Logger LOG = LoggerFactory.getLogger(DotPeekPage.class);
 
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(DotPeekPage.class));
 
