@@ -1,18 +1,19 @@
 package com.example.jetbrainstest.pages;
 
-import io.qameta.allure.Step;
+import com.example.jetbrainstest.AllureLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 // https://www.jetbrains.com/decompiler/
 
 public class DotPeekPage {
 
-    private final Logger LOG  = LoggerFactory.getLogger(DotPeekPage.class);
+//    private final Logger LOG = LoggerFactory.getLogger(DotPeekPage.class);
+
+    private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(DotPeekPage.class));
 
     WebDriver driver;
 
@@ -24,8 +25,9 @@ public class DotPeekPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    @Step("Проверка активности кнопки загрузки")
-    public Boolean checkDownloadButtonIsClickable(){
+
+
+    public Boolean checkDownloadButtonIsClickable() {
         LOG.info("Проверка активности кнопки загрузки");
         return downloadButton.isEnabled();
     }
