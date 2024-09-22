@@ -27,7 +27,7 @@ public class DotPeekPage {
 
 
     public Boolean checkDownloadButtonIsClickable() {
-        LOG.info("Проверка активности кнопки загрузки");
+        LOG.infoWithScreenshot("Проверка активности кнопки загрузки");
         return downloadButton.isEnabled();
     }
 
