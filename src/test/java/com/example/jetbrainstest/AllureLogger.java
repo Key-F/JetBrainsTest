@@ -10,6 +10,7 @@ public class AllureLogger {
         this.logger = logger;
     }
 
+    //test
     @Step("{logText}")
     public void info(String logText) {
         logger.info(logText);
