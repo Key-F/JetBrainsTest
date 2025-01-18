@@ -10,7 +10,6 @@ public class AllureLogger {
         this.logger = logger;
     }
 
-    //test
     @Step("{logText}")
     public void info(String logText) {
         logger.info(logText);
@@ -21,6 +20,7 @@ public class AllureLogger {
         logger.info(logText);
         AllureAttachmentsManager.screenshot();
     }
+
     @Step("{logText}")
     public void error(String logText) {
         logger.error(logText);
