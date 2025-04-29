@@ -1,0 +1,86 @@
+MPS_1 Проверка, что кнопка Download активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Download доступна для нажатия - Кнопка доступна
+
+MPS_2 Проверка, что кнопка смены языка активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка смены языка в хэдере доступна для нажатия - Кнопка доступна
+
+MPS_3 Проверка, что кнопка EAP Program активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка EAP Program доступна для нажатия - Кнопка доступна
+
+MPS_4 Проверка, что кнопка Whats New активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Whats New доступна для нажатия - Кнопка доступна
+
+MPS_5 Проверка, что кнопка How Its work активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка How Its work доступна для нажатия - Кнопка доступна
+
+MPS_6 Проверка, что кнопка Learn Mps активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Learn Mps доступна для нажатия - Кнопка доступна
+
+MPS_7 Проверка, что кнопка Services активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Services доступна для нажатия - Кнопка доступна
+
+MPS_8 Проверка, что кнопка Search активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Search доступна для нажатия - Кнопка доступна
+
+MPS_9 Проверка поисковой строки
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на кнопку поиска - Открылась поисковая строка
+3) Ввести в поисковую строку Selenium - В поле написано Selenium
+4) Нажать enter - Открыта страница https://www.jetbrains.com/mps/?q=Selenium&s=full
+
+MPS_10 Проверка, что кнопка FAQ активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на белую кнопку Download - Открыта страница https://www.jetbrains.com/mps/download/#section=windows
+3) Убедиться, что кнопка FAQ доступна для нажатия - Кнопка доступна
+
+MPS_11 Проверка, что кнопка Profile активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Profile доступна для нажатия - Кнопка доступна
+
+MPS_12 Проверка, что кнопка Migration Guide активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на белую кнопку Download - Открыта страница https://www.jetbrains.com/mps/download/#section=windows
+3) Убедиться, что кнопка Migration Guide доступна для нажатия - Кнопка доступна
+
+MPS_13 Проверка, что кнопка Get Started активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на белую кнопку Download - Открыта страница https://www.jetbrains.com/mps/download/#section=windows
+3) Убедиться, что кнопка Get Started доступна для нажатия - Кнопка доступна
+
+MPS_14 Проверка, что кнопка Store активна
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что кнопка Store доступна для нажатия - Кнопка доступна
+
+MPS_15 Проверка текста Download MPS
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на белую кнопку Download - Открыта страница https://www.jetbrains.com/mps/download/#section=windows
+3) Убедиться, что на странице есть текст Download MPS - Текст есть
+
+MPS_16 Проверка текста на главной странице
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что на главной странице есть текст Meta Programming System - Текст есть
+
+MPS_17 Проверка, что перешли на экран загрузки
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на белую кнопку Download - Открыта страница https://www.jetbrains.com/mps/download/#section=windows
+
+MPS_18 Проверка, что перешли на экран Learn MPS
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на Learn MPS - Открыта страница https://www.jetbrains.com/mps/learn/
+
+MPS_19 Проверка текста MPS на главной странице
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Убедиться, что на главной странице есть текст MPS - Текст есть
+
+MPS_20 Проверка, что перешли на экран Get Started
+1) Открыть страницу MPS https://www.jetbrains.com/mps/ - Страница MPS открыта
+2) Нажать на кнопку Learn MPS - Открыта страница https://www.jetbrains.com/mps/learn/
+3) Нажать на кнопку Get started - Открыта страница https://www.jetbrains.com/help/mps/fast-track-to-mps.html
