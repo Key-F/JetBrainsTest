@@ -1,0 +1,98 @@
+1. **Проверка активности кнопки Download**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка Download доступна для клика.
+
+2. **Проверка доступности кнопки Get dotPeek**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка Get dotPeek доступна для клика.
+
+3. **Проверка доступности кнопки What's New**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка What's New доступна для клика.
+
+4. **Проверка доступности кнопки Features**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка Features доступна для клика.
+
+5. **Проверка доступности кнопки Docs & Demos**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка Docs & Demos доступна для клика.
+
+6. **Проверка доступности кнопки part of dotUltimate**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка dotUltimate доступна для клика.
+
+7. **Проверка доступности кнопки More features**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка More features доступна для клика.
+
+8. **Проверка доступности кнопки ReSharper**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка ReSharper доступна для клика.
+
+9. **Проверка доступности кнопки Rider**
+   1) Перейти на страницу https://www.jetbrains.com/decompiler/
+   2) Убедиться, что кнопка Rider доступна для клика.
+
+10. **Проверка доступности кнопки ReSharper C++**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка ReSharper C++ доступна для клика.
+
+11. **Проверка доступности кнопки dotTrace**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка dotTrace доступна для клика.
+
+12. **Проверка доступности кнопки dotMemory**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка dotMemory доступна для клика.
+
+13. **Проверка доступности кнопки dotCover**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка dotCover доступна для клика.
+
+14. **Проверка доступности кнопки dotPeek**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка dotPeek доступна для клика.
+
+15. **Проверка доступности кнопки Learn more**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка Learn more доступна для клика.
+
+16. **Проверка доступности кнопки Community forum**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка Community forum доступна для клика.
+
+17. **Проверка доступности кнопки Bug and issue tracker**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка Bug and issue tracker доступна для клика.
+
+18. **Проверка доступности кнопки .NET Tools blog**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка .NET Tools blog доступна для клика.
+
+19. **Проверка доступности кнопки @dotpeek on X**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка @dotpeek on X доступна для клика.
+
+20. **Проверка доступности кнопки IntelliJ IDEA**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка IntelliJ IDEA доступна для клика.
+
+21. **Проверка доступности кнопки Privacy & Security**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Убедиться, что кнопка Privacy & Security доступна для клика.
+
+22. **Проверка открытия страницы Learn more**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Кликнуть на кнопку Learn more.
+    3) Убедиться, что на сайте открылся раздел https://www.jetbrains.com/dotnet/.
+    4) Кликнуть на кнопку Buy dotUltimate.
+    5) Убедиться, что на сайте открылся раздел https://www.jetbrains.com/store/?section=commercial&billing=yearly.
+
+23. **Проверка открытия страницы Privacy & Security**
+    1) Перейти на страницу https://www.jetbrains.com/decompiler/
+    2) Кликнуть на кнопку Privacy & Security.
+    3) Убедиться, что на сайте открылся раздел https://www.jetbrains.com/privacy-security/.
+    4) Кликнуть на кнопку Our Commitment.
+    5) Убедиться, что на сайте открылся раздел https://www.jetbrains.com/company/commitment/.
+
