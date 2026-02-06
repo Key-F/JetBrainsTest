@@ -1,0 +1,309 @@
+package com.example.jetbrainstest.pages.codewithmepage;
+
+import com.example.jetbrainstest.AllureLogger;
+import com.example.jetbrainstest.MyWait;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.LoggerFactory;
+import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import static java.lang.Thread.sleep;
+
+public class CodeWithMePage {
+
+    private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(CodeWithMePage.class));
+    WebDriver driver;
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+    }
+
+
+    @FindBy(xpath = "//span[@data-test = 'menu-second-title-box-title']")
+    private WebElement CodeWithMeButton;
+    @FindBy(xpath = "//a[1][@target = '_self']")
+    private WebElement LocalSolutions;
+    @FindBy(xpath = "//button[@class=\"_mainMenuItem__action_1gpjikx_19\"]")
+    private WebElement pressMunu;
+    @FindBy(xpath = "//span[contains(text(),'Плагины для .NET-инструментов')]")
+    private WebElement toolsPluginsPage;
+
+    @FindBy(xpath = "//button[@class='ch2-btn ch2-allow-all-btn ch2-btn-primary']")
+    private WebElement closeCookiesButton;
+
+    @FindBy(xpath = "//*[@class ='jetbrains-cookies-banner-4__body']")
+    private WebElement cookiesBunner;
+
+
+    @FindBy(xpath = "//input[@name='email']")
+    private WebElement emailInput;
+
+    @FindBy(xpath = "//span[contains(text(), 'Submit')]")
+    private WebElement emailSubmit;
+
+    @FindBy(xpath = "//div[@class='_errorMessage_7jpdal_376']")
+    private WebElement messageWrongEmail;
+
+    @FindBy(xpath = "//p[@class = '_rs-text-1_1owszn1_1 _rs-typography_theme_dark_1owszn1_1 _rs-text_hardness_hard_1owszn1_1 _submitMessage_1bpbey6_233']")
+    private WebElement messageTrueEmail;
+
+
+    @FindBy(xpath = "//a[contains(@class, 'ytp-title-link') and contains(@class, 'yt-uix-sessionlink')]")
+    private WebElement videoTitleYouTube;
+
+    @FindBy(xpath = "//button[@data-test='button']")
+    private WebElement watchVideoButton;
+
+    @FindBy(xpath = "//img[@srcset]")
+    private WebElement imgVideoButton;
+
+    @FindBy(xpath = "//iframe [@src = 'https://a26669750187.cdn.optimizely.com/client_storage/a26669750187.html']")
+    private WebElement frameOne;
+    @FindBy(xpath = "//*[1][@controlslist ='nodownload']")
+    private WebElement videoPlayer;
+
+
+    @FindBy(xpath = "//*[@xmlns ='http://www.w3.org/2000/svg']")
+    private List<WebElement> manifestedButtons1;
+    @FindBy(xpath = "//*[@xmlns ='http://www.w3.org/2000/svg'] [not(@width='963')]")
+    private List<WebElement> manifestedButtons2;
+
+    @FindBy(xpath = "//*[@data-test='button'][  position() >= 2 and position() <= 12] ")
+    private List<WebElement> smallButtonsActivity;
+    @FindBy(xpath = "//*[@data-test='button']")
+    private List<WebElement> smallButtonsActivity2;
+
+    @FindBy(xpath = "//div[@class ='animation-img img-1 wt-display-sm-none']")
+    private WebElement buttonOne;
+    @FindBy(xpath = "//h2[contains(text(), 'Collaborate with other developers in a remote-first world')]")
+    private WebElement tranceToTextOne;
+
+    @FindBy(xpath = "//div[@class ='animation-img img-2 wt-display-sm-none']")
+    private WebElement buttonTwo;
+    @FindBy(xpath = "//h2[contains(text(), 'How to get started')]")
+    private WebElement tranceToTextTwo;
+
+    @FindBy(xpath = "//div[@class ='animation-img img-3 wt-display-sm-none']")
+    private WebElement buttonThree;
+    @FindBy(xpath = "//h2[contains(text(), 'Get a full-featured experience for everyone')]")
+    private WebElement tranceToTextThree;
+
+    @FindBy(xpath = "//div[@class ='animation-img img-4 wt-display-sm-none']")
+    private WebElement buttonFour;
+    @FindBy(xpath = "//h2[contains(text(), 'Strike the perfect balance between powerful collaboration and strong security')]")
+    private WebElement tranceToTextFour;
+    @FindBy(xpath = "   //*[@href='/code-with-me/on-prem/' and contains(text(), 'Learn more')]")
+    private WebElement tranceToLearnMoreFour;
+
+    @FindBy(xpath = "//*[@id='rand']")
+    private WebElement ButtonName;
+    @FindBy(xpath = "//*[@class='email'] ")
+    private WebElement emailField;
+    @FindBy(xpath = "//*[@class='fa fa-circle fa-fw margin seen-icon']")
+    private WebElement answerField;
+    @FindBy(xpath = "//*[@class='value']")
+    private WebElement messadge;
+
+
+    public void toScroll (WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+
+        try {
+            sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void scrollAndClick(WebDriver driver, WebElement element) {
+        driver.manage().window().setSize(new Dimension(1920, 3000)); // ↑ Выше!
+
+        System.out.println("Перед скроллом:");
+        System.out.println("Размер окна: " + driver.manage().window().getSize());
+        System.out.println("Элемент: " + element.isDisplayed() + ", " + element.isEnabled());
+        System.out.println("Координаты: " + element.getLocation());
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block: 'center', behavior: 'instant'});",
+                element
+        );
+
+        try {
+            Thread.sleep(1000); // Даём рендеру время
+            Point point = element.getLocation();
+            ((JavascriptExecutor) driver).executeScript(
+                    "window.scrollTo(0, " + (point.getY() - 400) + ");"
+            );
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println("После скролла:");
+        System.out.println("Элемент: " + element.isDisplayed() + ", " + element.isEnabled());
+
+        try {
+            new Actions(driver)
+                    .moveToElement(element)
+                    .pause(Duration.ofMillis(500))
+                    .click()
+                    .perform();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].click(); arguments[0].dispatchEvent(new Event('click'));",
+                    element
+            );
+        }
+    }
+
+
+
+    public boolean buttonsCheckActivity(int index) {
+        LOG.info("Проверяем активность 4-рех кнопок");
+        return manifestedButtons2.get(index).isEnabled();
+    }
+
+    public boolean buttonsCheckActivity2(int index) {
+        LOG.info("Проверяем активность 8-ми кнопок");
+        smallButtonsActivity2.remove(0);
+        smallButtonsActivity2.remove(1);
+        smallButtonsActivity2.remove(2);
+        smallButtonsActivity2.remove(3);
+        return smallButtonsActivity2.get(index).isEnabled();
+    }
+
+    public boolean isDisplayedTextAfterClick1() {
+        toScroll(buttonOne);
+        buttonOne.click();
+        return tranceToTextOne.isDisplayed();
+    }
+
+    public boolean isDisplayedTextAfterClick2() {
+        toScroll(buttonTwo);
+        buttonTwo.click();
+        return tranceToTextTwo.isDisplayed();
+    }
+
+    public boolean isDisplayedTextAfterClick3() {
+        toScroll(buttonThree);
+        buttonThree.click();
+        return tranceToTextThree.isDisplayed();
+    }
+
+    public boolean isDisplayedTextAfterClick4() {
+        toScroll(buttonFour);
+        buttonFour.click();
+        return tranceToTextFour.isDisplayed();
+    }
+
+    public void enterEmail(String email) {
+        LOG.info("Ввод email");
+        emailInput.sendKeys(email);
+        emailSubmit.click();
+    }
+
+    public String getAnswerTrueEmail(String email) {
+        LOG.info("E-mail Валиден");
+        return messageTrueEmail.getText();
+    }
+
+    public String getMessageWrongEmail(String email) {
+        enterEmail(email);
+        LOG.info("E-mail НЕ валиден");
+        return messageWrongEmail.getText();
+    }
+
+    public void videoImg() {
+        LOG.info("Возпроизведение видео по картинке");
+        imgVideoButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameOne));
+    }
+
+    public String getNameOfVideo() {
+        LOG.infoWithScreenshot("Получение названия видео");
+        String title = videoTitleYouTube.getText().trim();
+        driver.switchTo().defaultContent();
+        return title;
+    }
+
+    public void videoButton() {
+        LOG.info("Возпроизведение видео по кнопке <Whatch>");
+        scrollAndClick(driver , watchVideoButton);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameOne));
+    }
+
+    public double videoPlayerPlayinable() throws Exception {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        String source1 = (String) jsExecutor.executeScript("return arguments[0].currentSrc;", videoPlayer);
+
+        LOG.infoWithScreenshot("Воспроизводим видео");
+        jsExecutor.executeScript("arguments[0].play();", videoPlayer);
+        Thread.sleep(2000); // Ждем 2 секунд
+
+        LOG.infoWithScreenshot("Пауза для видео");
+        jsExecutor.executeScript("arguments[0].pause();", videoPlayer);
+
+        LOG.infoWithScreenshot("Получаем длительность видео на текущий момент");
+        double currentTime = (Double) jsExecutor.executeScript("return arguments[0].currentTime;", videoPlayer);
+        double floorValue = Math.floor(currentTime);
+        return floorValue;
+    }
+
+    public String videoPlayerSource() throws Exception {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        LOG.infoWithScreenshot("Получаем источник видео");
+        String source2 = (String) jsExecutor.executeScript("return arguments[0].currentSrc;", videoPlayer);
+        return source2;
+    }
+
+    public Boolean codeWithMeClickable() {
+        LOG.infoWithScreenshot("Проверка доступности кнопки <Code With Me>");
+        driver.get("https://www.jetbrains.com/code-with-me/");
+        return CodeWithMeButton.isEnabled();
+    }
+
+    public String codeWithMeCheckUrl() {
+        driver.get("https://www.jetbrains.com/code-with-me/on-prem/");
+        CodeWithMeButton.click();
+        LOG.infoWithScreenshot("Проверка URL страницы, после нажатия кнопки <Code With Me> ");
+        return driver.getCurrentUrl();
+    }
+
+    public Boolean localSolutionsClickable() {
+        LOG.infoWithScreenshot("Проверка доступности кнопки <Локальные решения>");
+        driver.get("https://www.jetbrains.com/code-with-me/");
+        return CodeWithMeButton.isEnabled();
+    }
+
+    public void closeCookiesBunner() {
+        LOG.infoWithScreenshot("Закрываем Cookies Баннер");
+        closeCookiesButton.click();
+    }
+
+    public String emailGenerate() {
+        driver.get("https://www.mohmal.com/ru/inbox");
+        ButtonName.click();
+        return emailField.getAttribute("data-email");
+    }
+
+    public CodeWithMePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+}
+
+
+
+
+
