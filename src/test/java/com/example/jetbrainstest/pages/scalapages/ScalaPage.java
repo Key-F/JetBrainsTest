@@ -1,14 +1,12 @@
-package com.example.jetbrainstest.pages;
+package com.example.jetbrainstest.pages.scalapages;
 
 import com.example.jetbrainstest.AllureLogger;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
@@ -25,18 +23,44 @@ public class ScalaPage {
     private WebElement versions;
     @FindBy(xpath = "//*[contains(text(),'Show More')]")
     private WebElement showMore;
+    @FindBy(xpath = "//*[contains(text(),'nightly')]")
+    private WebElement nightly;
+    @FindBy(xpath = "//*[contains(text(),'eap')]")
+    private WebElement eap;
+    @FindBy(css = "div.text-capitalize")
+    private WebElement stable;
 
-    public Boolean checkIfGetButtonIsClickable() {
-        LOG.info("Проверка активности кнопки загрузки");
+    public boolean checkIfGetButtonIsClickable() {
+        LOG.infoWithScreenshot("Проверка активности кнопки загрузки");
         wait.until(ExpectedConditions.visibilityOfAllElements(getButton));
         return getButton.isEnabled();
     }
 
-    public Boolean findButtonShowMore() {
+    public boolean findButtonShowMore() {
         LOG.info("Проверка наличия кнопки 'Show More'");
         versions.click();
         wait.until(ExpectedConditions.visibilityOfAllElements(showMore));
         return showMore.isDisplayed();
+    }
+
+    public boolean findButtonNightly() {
+        LOG.infoWithScreenshot("Проверка наличия кнопки nightly");
+        versions.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(nightly));
+        return nightly.isDisplayed();
+    }
+
+    public boolean findButtonEap() {
+        LOG.infoWithScreenshot("Проверка наличия кнопки EAP");
+        versions.click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(nightly));
+        return eap.isDisplayed();
+    }
+
+    public boolean checkStable() {
+        LOG.infoWithScreenshot("Проверка наличия кнопки Stable");
+        versions.click();
+        return stable.isEnabled();
     }
 
     public ScalaPage(WebDriver driver) {
