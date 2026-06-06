@@ -8,15 +8,17 @@ import org.junit.jupiter.api.Test;
 
 public class RustRoverTest extends BaseTest {
     private RustRoverPage rustRoverPage;
+
     @BeforeEach
     @Override
     public void setUp() {
         super.setUp();
         rustRoverPage = new RustRoverPage(getDriver());
     }
+
     @Test
     @DisplayName("Check that new page is opened")
-    public  void CheckUrlAfterClickOnDownloadRustPreviewButton() {
+    public void CheckUrlAfterClickOnDownloadRustPreviewButton() {
         rustRoverPage = new RustRoverPage(getDriver());
         Assertions.assertEquals(rustRoverPage.clickRustDownloadAndCheckUrl(), "https://www.jetbrains.com/rust/nextversion/", "URL не равен ожидаемому");
     }
