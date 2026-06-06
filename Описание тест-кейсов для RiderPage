@@ -1,0 +1,72 @@
+1. @DisplayName("Проверка кликабельности кнопки перехода на главную страницу")
+- проверка что кнопка перехода на главную страницу активна
+
+2. @DisplayName("Проверка нажатия на кнопку Download")
+- кликаем на кнопку Download
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/download/#section=windows"
+
+3. @DisplayName("Проверка нажатия на кнопку Docker")
+- нажимаем на кнопку Docker
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/guide/dotnet/tutorials/docker-dotnet/"
+
+4. @DisplayName("Проверка нажатия на кнопку Pricing")
+- нажимаем на кнопку Pricing
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/buy/?section=personal&billing=yearly"
+
+5.@DisplayName("Проверка нажатия на кнопку Coming in 2024.3")
+- нажимаем на кнопку Coming in 2024.3
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/nextversion/"
+
+6.@DisplayName("Проверка нажатия на кнопку Features")
+- нажимаем на кнопку Features
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/features/"
+
+7.@DisplayName("Проверка нажатия на кнопку Learn")
+- нажимаем на кнопку Learn
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/documentation/"
+
+8. @DisplayName("Проверка нажатия на кнопку Social")
+- нажимаем на кнопку Social
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/social/"
+
+9.@DisplayName("Проверка нажатия на кнопку Fast Tracked")
+- нажимаем на кнопку Fast Tracked
+- проверяем что произошел переход на блок Fast Tracked
+
+10. @DisplayName("Проверка нажатия на кнопку Game Dev")
+- нажимаем на кнопку Game Dev
+- проверяем что произошел переход на блок Game Dev
+
+11. @DisplayName("Проверка нажатия на кнопку Next-Level")
+- нажимаем на кнопку Next-Level
+- проверяем что произошел переход на блок Next-Level
+
+12. @DisplayName("Проверка нажатия на кнопку ReSharper C++")
+- нажимаем на кнопку ReSharper C++
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/resharper-cpp/"
+
+13. @DisplayName("Проверка нажатия на кнопку dotCover")
+- нажимаем на кнопку dotCover
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/dotcover/"
+
+14. @DisplayName("Проверка нажатия на кнопку dotMemory")
+- нажимаем на кнопку dotMemory
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/dotmemory/"
+
+15. @DisplayName("Проверка нажатия на кнопку dotTrace")
+- нажимаем на кнопку dotTrace
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/profiler/"
+
+16. @DisplayName("Проверка нажатия на кнопку dotPeek")
+- нажимаем на кнопку dotPeek
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/decompiler/"
+
+17. @DisplayName("Проверка кликабельности кнопки перехода на страницу Team Tools")
+
+18. @DisplayName("Проверка кликабельности кнопки перехода на страницу Support")
+
+19. @DisplayName("Проверка кликабельности кнопки перехода на страницу Education")
+
+20. @DisplayName("Проверка нажатия на кнопку Whats New")
+- нажимаем на кнопку Whats New
+- проверяем что произошел переход на страницу "https://www.jetbrains.com/rider/whatsnew/"
