@@ -1,0 +1,12 @@
+package com.example.jetbrainstest;
+
+import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
+import org.junit.jupiter.api.extension.ExtensionContext;
+
+public class NewExtension implements AfterTestExecutionCallback {
+
+    @Override
+    public void afterTestExecution(ExtensionContext extensionContext) {
+        if (extensionContext.getExecutionException().isPresent()) AllureAttachmentsManager.screenshot();
+    }
+}
