@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.slf4j.LoggerFactory;
 
+//page url = https://www.jetbrains.com/clion/download/
 public class CLionDownloadPage {
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(CLionDownloadPage.class));
     private final WebDriver driver;
@@ -16,16 +17,19 @@ public class CLionDownloadPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "a[href=\"/clion/download/\"]")
+    @FindBy(xpath = "//a[contains(text(),'Download')]")
     private WebElement downloadButton;
 
-    @FindBy(xpath = "//button[contains(text(), '.exe')]")
+    @FindBy(xpath = "//button[@data-test='dropdown-trigger']/span[contains(text(), '.exe')]")
     private WebElement exeButton;
 
-    @FindBy(xpath = "//button[contains(text(), '.exe')]")
+    @FindBy(xpath = "//div[contains(text(), 'Windows')]/..")
+    private WebElement windowsButton;
+
+    @FindBy(xpath = "//span[contains(text(), '.zip')]")
     private WebElement zipButton;
 
-    @FindBy(xpath = "//span[contains(text(), 'Installation instructions')]")
+    @FindBy(xpath = "//div[@class='wt-css-content-switcher__block']//span[contains(text(), 'Installation instructions')]")
     private WebElement InstructionButton;
 
     @FindBy(xpath = "//div[contains(text(), 'Installation instructions')]")
@@ -39,6 +43,19 @@ public class CLionDownloadPage {
     public void clickExe() {
         LOG.info("Клик по выпадающему списку .exe");
         exeButton.click();
+    }
+
+    public void clickWindowsButtonIfNotSelected() {
+        LOG.info("Клик по кнопке Windows, если кнопка неактивна");
+        Boolean windowsButtonIsSelected = checkWindowsButton();
+        if (!windowsButtonIsSelected)
+            windowsButton.click();
+    }
+
+    public Boolean checkWindowsButton() {
+        LOG.info("Проверка, что кнопка Windows выбрана");
+        String attributeDataTestOfWindowsButton = windowsButton.getAttribute("data-test");
+        return attributeDataTestOfWindowsButton.equals("tab tab-selected");
     }
 
     public Boolean checkIfZipButtonIsClickable() {
